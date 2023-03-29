@@ -24,7 +24,6 @@
 
 <a href="https://github.com/sugeng-sulistiyawan">
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=sugeng-sulistiyawan&repo=github-readme-stats&theme=buefy" />
-</a>
-<a href="https://github.com/sugeng-sulistiyawan/sugeng-sulistiyawan.github.io">
+</a><a href="https://github.com/sugeng-sulistiyawan/sugeng-sulistiyawan.github.io">
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=sugeng-sulistiyawan&repo=sugeng-sulistiyawan.github.io&theme=buefy" />
 </a>
