@@ -1,5 +1,5 @@
-**Hello, World!**
- I'm a self-taught passionate FullStack developer from Indonesia ❤🤍
+**Hello, World!**<br />
+I'm a self-taught passionate FullStack developer from ❤🤍 **Indonesia** ❤🤍
 
 **About me**
 
@@ -12,11 +12,9 @@
 <code><img height="32" width="32" src="./images/PostgreSQL.svg" alt="PostgreSQL" /></code>
 <code><img height="32" width="32" src="./images/Arduino.svg" alt="Arduino" /></code> -->
 
-| <a>
-  <img src="https://github-readme-stats.vercel.app/api?username=sugeng-sulistiyawan&show_icons=true&include_all_commits=true&theme=swift&hide_border=true" />
-</a> | <a>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sugeng-sulistiyawan&layout=compact&theme=swift&hide_border=true" />
-</a> |
+<br />
+
+| <img src="https://github-readme-stats.vercel.app/api?username=sugeng-sulistiyawan&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" /> | <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sugeng-sulistiyawan&layout=compact&theme=buefy&hide_border=true" /> |
 | ------------- | ------------- |
 
 
