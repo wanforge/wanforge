@@ -12,9 +12,12 @@
 <code><img height="32" width="32" src="./images/PostgreSQL.svg" alt="PostgreSQL" /></code>
 <code><img height="32" width="32" src="./images/Arduino.svg" alt="Arduino" /></code> -->
 
-
-<img src="https://github-readme-stats.vercel.app/api?username=sugeng-sulistiyawan&show_icons=true&include_all_commits=true&theme=swift&hide_border=true" alt="Sugeng Sulistiyawan's github stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sugeng-sulistiyawan&layout=compact&theme=swift&hide_border=true" />
+<a>
+  <img src="https://github-readme-stats.vercel.app/api?username=sugeng-sulistiyawan&show_icons=true&include_all_commits=true&theme=swift&hide_border=true" alt="Sugeng Sulistiyawan's github stats" />
+</a>
+<a>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sugeng-sulistiyawan&layout=compact&theme=swift&hide_border=true" />
+</a>
 
 
 <br />
