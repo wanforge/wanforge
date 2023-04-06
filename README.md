@@ -2,7 +2,7 @@
 
 I'm a self-taught passionate FullStack developer from ❤🤍 **Indonesia** ❤🤍
 
-> get to know me better [sugengsulistiyawan.my.id](https://www.sugengsulistiyawan.my.id)
+> Get to know me better [sugengsulistiyawan.my.id](https://www.sugengsulistiyawan.my.id)
 
 **About me**
 
