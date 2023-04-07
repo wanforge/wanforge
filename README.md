@@ -8,7 +8,7 @@ I'm a self-taught passionate FullStack developer from ❤🤍 **Indonesia** ❤�
 
 <br />
 
-| [![Sugeng Sulistiyawan's GitHub Stats](https://github-readme-stats.vercel.app/api?username=sugeng-sulistiyawan&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true)](https://github-readme-stats.vercel.app/api?username=sugeng-sulistiyawan&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true) | [![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=sugeng-sulistiyawan&layout=compact&theme=buefy&hide_border=true)](https://github-readme-stats.vercel.app/api/top-langs/?username=sugeng-sulistiyawan&layout=compact&theme=buefy&hide_border=true) |
+| [![Sugeng Sulistiyawan's GitHub Stats](https://github-readme-stats.vercel.app/api?username=sugeng-sulistiyawan&show_icons=true&include_all_commits=true&count_private=true&theme=buefy&hide_border=true)](https://github-readme-stats.vercel.app/api?username=sugeng-sulistiyawan&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true) | [![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=sugeng-sulistiyawan&hide=css,html&layout=compact&langs_count=10&theme=buefy&hide_border=true)](https://github-readme-stats.vercel.app/api/top-langs/?username=sugeng-sulistiyawan&layout=compact&theme=buefy&hide_border=true) |
 | ------------- | ------------- |
 
 ### **Top Repositories**
