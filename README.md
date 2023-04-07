@@ -8,7 +8,7 @@ I'm a self-taught passionate FullStack developer from ❤🤍 **Indonesia** ❤�
 
 <br />
 
-| [![Sugeng Sulistiyawan's GitHub Stats](https://github-readme-stats.vercel.app/api?username=sugeng-sulistiyawan&show_icons=true&include_all_commits=true&count_private=true&theme=buefy&hide_border=true)](https://github.com/sugeng-sulistiyawan?tab=repositories) | [![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=sugeng-sulistiyawan&hide=css,html&layout=compact&langs_count=10&theme=buefy&hide_border=true)](https://github.com/sugeng-sulistiyawan?tab=repositories) |
+| <img src="https://github-readme-stats.vercel.app/api?username=sugeng-sulistiyawan&show_icons=true&include_all_commits=true&count_private=true&theme=buefy&hide_border=true" /> | <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sugeng-sulistiyawan&hide=css,html&layout=compact&langs_count=10&theme=buefy&hide_border=true" /> |
 | ------------- | ------------- |
 
 ### **Top Repositories**
