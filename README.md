@@ -46,3 +46,7 @@ I'm a self-taught passionate FullStack developer from ❤🤍 **Indonesia** ❤�
 <a href="https://github.com/sugeng-sulistiyawan/yii2-aws-s3">
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=sugeng-sulistiyawan&repo=yii2-aws-s3&theme=swift&hide_border=true" />
 </a>
+
+<a href="https://github.com/sugeng-sulistiyawan/yii2-pdfjs">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=sugeng-sulistiyawan&repo=yii2-pdfjs&theme=swift&hide_border=true" />
+</a>
