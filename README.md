@@ -1,4 +1,4 @@
-## **Hello, World!**
+## **Hello, World!** 👋
 
 I'm a self-taught passionate FullStack developer from ❤🤍 **Indonesia** ❤🤍
 
