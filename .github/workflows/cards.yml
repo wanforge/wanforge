@@ -26,3 +26,4 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
           BRANCH_NAME: master
           UTC_OFFSET: 7
+          EXCLUDE: "HTML"
