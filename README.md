@@ -9,6 +9,6 @@ I'm a self-taught passionate FullStack developer from ❤🤍 **Indonesia** ❤�
 
 ### GitHub stats
 
-[![](/profile-summary-card-output/github/0-profile-details.svg)](profile-summary-card-output/github/0-profile-details.svg)
-[![](/profile-summary-card-output/github/1-repos-per-language.svg)](profile-summary-card-output/github/1-repos-per-language.svg) [![](https://raw.githubusercontent.com/sugeng-sulistiyawan/sugeng-sulistiyawan/master/profile-summary-card-output/github/2-most-commit-language.svg)](https://github.com/sugeng-sulistiyawan/)
-[![](https://raw.githubusercontent.com/sugeng-sulistiyawan/sugeng-sulistiyawan/master/profile-summary-card-output/github/3-stats.svg)](https://github.com/sugeng-sulistiyawan/) [![](https://raw.githubusercontent.com/sugeng-sulistiyawan/sugeng-sulistiyawan/master/profile-summary-card-output/github/4-productive-time.svg)](https://github.com/sugeng-sulistiyawan/)
+[![](profile-summary-card-output/github/0-profile-details.svg)](profile-summary-card-output/github/0-profile-details.svg)
+[![](profile-summary-card-output/github/1-repos-per-language.svg)](profile-summary-card-output/github/1-repos-per-language.svg) [![](profile-summary-card-output/github/2-most-commit-language.svg)](profile-summary-card-output/github/2-most-commit-language.svg)
+[![](profile-summary-card-output/github/3-stats.svg)](profile-summary-card-output/github/3-stats.svg) [![](profile-summary-card-output/github/4-productive-time.svg)](profile-summary-card-output/github/4-productive-time.svg)
