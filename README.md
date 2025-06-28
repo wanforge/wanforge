@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=35&duration=3000&pause=1000&color=F77716&center=true&vCenter=true&random=false&width=600&height=100&lines=Hello%2C+I'm+Sugeng+Sulistiyawan;Full+Stack+Developer;Open+Source+Enthusiast;From+Indonesia+%F0%9F%87%AE%F0%9F%87%A9" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=35&duration=3000&pause=1000&color=3B060A&center=true&vCenter=true&random=false&width=600&height=100&lines=\\\Hello%2C+I'm+Sugeng+Sulistiyawan;\Full+Stack+Developer;\Open+Source+Enthusiast;\From+Indonesia+%F0%9F%87%AE%F0%9F%87%A9" alt="Typing SVG" />
   
   <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
   
@@ -108,7 +108,7 @@ const my = {
 - 🌱 I'm currently learning **Cloud Architecture & DevOps**
 - 👯 I'm looking to collaborate on **Open Source Projects**
 - 💬 Ask me about **JavaScript, TypeScript, React, Node.js, Laravel**
-- 📫 How to reach me: **<sugeng-sulistiyawan@gmail.com>**
+- 📫 How to reach me: **<sugeng.sulistiyawan@gmail.com>**
 - ⚡ Fun fact: **I love coffee and coding at night! ☕🌙**
 
 ## 💼 Experience Highlights
@@ -177,13 +177,9 @@ const experience = [
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-  
-### 🐍 Watch my contribution graph get eaten by the snake
-  
-  ![Snake animation](https://github.com/sugeng-sulistiyawan/sugeng-sulistiyawan/blob/output/github-contribution-grid-snake.svg)
-  
+
   <br>
-  
+
   ![Profile Views](https://komarev.com/ghpvc/?username=sugeng-sulistiyawan&label=Profile%20views&color=0e75b6&style=flat)
   [![GitHub followers](https://img.shields.io/github/followers/sugeng-sulistiyawan.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/sugeng-sulistiyawan?tab=followers)
   
