@@ -19,7 +19,7 @@ const sugengSulistiyawan = {
   location: "Trenggalek, East Java, Indonesia 🇮🇩",
   experience: "5+ years",
   email: "sugeng.sulistiyawan@gmail.com",
-  website: "sugengsulistiyawan.my.id",
+  website: "sugeng-sulistiyawan.github.io",
   
   expertise: {
     webApplications: "150+ projects delivered",
@@ -72,7 +72,8 @@ const sugengSulistiyawan = {
 ### Frontend
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
@@ -102,8 +103,7 @@ const sugengSulistiyawan = {
 ### IoT & Hardware
 
 ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
-![ESP32](https://img.shields.io/badge/ESP32-000000?style=for-the-badge&logo=espressif&logoColor=white)
-![ESP8266](https://img.shields.io/badge/ESP8266-000000?style=for-the-badge&logo=espressif&logoColor=white)
+![ESP (ESP32/ESP8266)](https://img.shields.io/badge/ESP%20(ESP32%2FESP8266)-000000?style=for-the-badge&logo=espressif&logoColor=white)
 ![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=for-the-badge&logo=Raspberry%20Pi&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
@@ -132,12 +132,16 @@ const sugengSulistiyawan = {
 
 ![CorelDRAW](https://img.shields.io/badge/CorelDRAW-00A651?style=for-the-badge&logo=coreldraw&logoColor=white)
 ![Adobe Illustrator](https://img.shields.io/badge/Adobe_Illustrator-FF9A00?style=for-the-badge&logo=adobe-illustrator&logoColor=white)
+![Adobe Photoshop](https://img.shields.io/badge/Adobe_Photoshop-31A8FF?style=for-the-badge&logo=adobe-photoshop&logoColor=white)
+![Adobe XD](https://img.shields.io/badge/Adobe_XD-FF61F6?style=for-the-badge&logo=adobe-xd&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 ![Inkscape](https://img.shields.io/badge/Inkscape-000000?style=for-the-badge&logo=inkscape&logoColor=white)
+![Canva](https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white)
+![BoxySVG](https://img.shields.io/badge/BoxySVG-FF6F00?style=for-the-badge&logo=boxysvg&logoColor=white)
 
 ### Tools & Others
 
-![VS Code](https://img.shields.io/badge/VS_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Microsoft Office](https://img.shields.io/badge/Microsoft_Office-D83B01?style=for-the-badge&logo=microsoft-office&logoColor=white)
 ![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white)
 ![Trello](https://img.shields.io/badge/Trello-0079BF?style=for-the-badge&logo=trello&logoColor=white)
@@ -173,12 +177,10 @@ const sugengSulistiyawan = {
   
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/sugeng-sulistiyawan)
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sugeng.sulistiyawan@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://sugengsulistiyawan.my.id)
+[![Portfolio](https://img.shields.io/badge/Portfolio-7C3AED?style=for-the-badge&logo=todoist&logoColor=white)](https://sugeng-sulistiyawan.github.io)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sugeng-sulistiyawan)
-[![GitLab](https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab&logoColor=white)](https://gitlab.com/sugeng-sulistiyawan)
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@sugeng-sulistiyawan)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/sugeng-sulistiyawan)
-[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/sugeng-sulistiyawan)
+[![GitLab](https://img.shields.io/badge/GitLab-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white)](https://gitlab.com/sugeng-sulistiyawan)
+[![Instagram](https://img.shields.io/badge/Instagram-%23C13584?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/sugeng-sulistiyawan)
 
 </div>
 
@@ -198,27 +200,69 @@ const sugengSulistiyawan = {
 ```javascript
 const careerJourney = [
   {
-    role: "Full-stack Developer, DevOps & Network Operator",
+    role: "Full-stack Developer, DevOps, Network Operator (NOC) & Server Admin",
     company: "RSUD dr. Soedomo Trenggalek",
-    period: "June 2024 - January 2025",
-    technologies: ["PHP", "Yii2", "Laravel", "Angular", "Node.js", "AWS", "Ubuntu Server", "Mikrotik"],
+    period: "June 2024 - Present",
+    technologies: ["PHP", "Yii Framework", "Laravel", "AngularJS", "Node.js", "S3", "Ubuntu Server", "Baremetal Server", "AMQP", "Redis", "MySQL", "PostgreSQL", "DNS", "Mikrotik", "Ruijie"],
     responsibilities: [
       "Developing healthcare web applications",
+      "Building and maintaining frontend with Angular and React",
+      "Implementing backend services using Node.js and Python",
       "Server configuration & maintenance",
       "Network infrastructure management",
       "Database optimization (MySQL, PostgreSQL)"
     ]
   },
   {
+    role: "Freelance Developer & Designer",
+    period: "2015 - Present",
+    specialization: "Empowering UMKM (SMEs) & Organizations Across Indonesia",
+    technologies: [
+      "PHP", "Yii2", "Laravel", "Node.js", "Vue.js", "React", "Angular", "JavaScript", "TypeScript",
+      "Flutter", "React Native", "Android Studio",
+      "MySQL", "PostgreSQL", "Redis", "MongoDB",
+      "AWS (EC2, S3, RDS)", "Google Cloud",
+      "Docker", "Kubernetes", "CI/CD", "Ubuntu Server",
+      "Arduino", "ESP32", "ESP8266", "C++",
+      "CorelDraw", "Adobe Illustrator", "Figma",
+      "Mikrotik", "DNS", "Network Architecture"
+    ],
+    achievements: [
+      "Delivered 150+ custom web applications for healthcare, business, and education sectors",
+      "Developed 50+ IoT solutions including smart sensors, automation, and monitoring systems",
+      "Created 200+ logo and branding designs for companies, startups, and communities",
+      "Built cross-platform mobile apps using Flutter and React Native for SMEs and entrepreneurs",
+      "Implemented scalable cloud infrastructure and DevOps pipelines (AWS, Google Cloud, Docker, Kubernetes, CI/CD)",
+      "Configured and maintained servers (Ubuntu, Linux) for web hosting and application deployment",
+      "Optimized network infrastructure with Mikrotik, DNS, and secure VPN solutions",
+      "Provided end-to-end digitalization: UI/UX design, frontend (Vue.js, React, Angular), backend (PHP, Laravel, Node.js, Yii2), database, and server management",
+      "Established and managed CI/CD pipelines for automated testing and deployment",
+      "Supported digital transformation for local businesses through technology consulting, training, and open source collaboration"
+    ]
+  },
+  {
     role: "Full-stack Developer & DevOps",
     company: "Matador Lectro, Surakarta", 
     period: "August 2023 - May 2024",
-    technologies: ["PHP", "Yii2", "Node.js", "React Native", "Flutter", "AWS"],
+    technologies: ["PHP", "Yii Framework", "Node.js", "Arduino", "React Native", "Flutter", "AWS", "S3", "EC2", "RDS", "AMQP", "Redis", "Google Play Console", "SEO", "MySQL", "PostgreSQL", "DNS"],
     achievements: [
-      "Developed web & mobile applications",
-      "Published apps to Google Play Store",
-      "Managed cloud infrastructure (EC2, S3, RDS)",
-      "Implemented SEO optimization"
+      "Developing web & mobile applications",
+      "Configuring & maintaining servers",
+      "Publishing apps to Google Play Store",
+      "Managing cloud infrastructure (EC2, S3, RDS)",
+      "Implementing SEO optimization strategies"
+    ]
+  },
+  {
+    role: "Backend Developer & DevOps",
+    company: "Matador Lectro, Surakarta",
+    period: "August 2021 - 2023", 
+    technologies: ["PHP", "Yii Framework", "Node.js", "AWS", "Google Console Developer", "MySQL", "PostgreSQL", "S3", "Cloud VPS", "DNS"],
+    achievements: [
+      "Followed policies and procedures related to application methods and quality standards",
+      "Created detailed technical and user documentation",
+      "Effectively coded software changes based on design specifications",
+      "Managed cloud infrastructure and deployment processes"
     ]
   },
   {
@@ -227,53 +271,87 @@ const careerJourney = [
     period: "September 2022 - 2023", 
     tools: ["Notion", "Trello"],
     achievements: [
-      "Led cross-functional teams",
-      "Managed project budgets & requirements",
-      "Delivered projects on time and within budget",
-      "Stakeholder communication & reporting"
+      "Worked with the overall mission of the company to effectively convey and promote the company's brand",
+      "Collaborated with cross-functional teams to achieve project goals in a timely manner",
+      "Managed and implemented project budget and requirements",
+      "Provided project updates to stakeholders and supervisors"
     ]
   },
   {
     role: "Firmware Engineer", 
     company: "Matador Lectro, Surakarta",
     period: "August 2021 - August 2022",
-    technologies: ["Arduino", "C++", "ESP32"],
+    technologies: ["Arduino", "C++", "ESP"],
     achievements: [
-      "Designed electrical system specifications",
-      "Created comprehensive test plans", 
-      "Optimized production processes",
-      "Collaborated with engineering teams"
+      "Oversaw and planned electrical specifications for new systems",
+      "Created and implemented comprehensive test plans", 
+      "Accurately diagnosed and directed system issues",
+      "Developed advanced design options for structures and systems",
+      "Worked to create improvements that optimized production",
+      "Collaborated with other engineers to solve problems and enhance processes"
     ]
   },
   {
-    role: "Freelance Developer & Designer",
-    period: "2015 - Present",
-    specialization: "Supporting UMKM (SMEs) in Indonesia",
+    role: "CEO & Developer",
+    company: "IMPERDEV, Trenggalek",
+    period: "2022 - 2023",
+    focus: "Technology startup and future development projects"
+  },
+  {
+    role: "Director & COO",
+    company: "PT Wawasan Maju Nusantara, Trenggalek",
+    period: "2021 - Present",
+    focus: "Strategic planning and operational management for future business development"
+  },
+  {
+    role: "Technology Innovation & Developer",
+    company: "Innovation Hub Universitas Sebelas Maret, Surakarta",
+    period: "April 2021 - August 2021",
+    technologies: ["PHP", "Yii Framework", "Node.js", "AWS", "Google Console Developer", "MySQL", "PostgreSQL", "S3", "Cloud VPS", "DNS", "Integrated API"],
+    focus: "Innovation and technology development in university environment"
+  },
+  {
+    role: "Heat of Developer",
+    company: "Youth Power Action, Trenggalek",
+    period: "February 2021 - August 2021",
+    focus: "Leading development initiatives for youth empowerment projects"
+  },
+  {
+    role: "Staff IT",
+    company: "RSUD Soedomo, Trenggalek",
+    period: "November 2020 - January 2021",
+    technologies: ["PHP", "Yii Framework", "Laravel", "CodeIgniter", "Node.js", "AWS", "PostgreSQL", "Mikrotik"],
+    responsibilities: [
+      "IT support and system maintenance",
+      "Database management and optimization",
+      "Network configuration and troubleshooting"
+    ]
+  },
+  {
+    role: "CEO & Developer",
+    company: "Die Coding Technology, Surakarta",
+    period: "2017 - Present",
+    focus: "Technology company leadership and software development projects",
     achievements: [
-      "150+ web applications delivered",
-      "200+ logo & graphic designs created",
-      "Supporting local businesses digitalization",
-      "Full-stack development across multiple technologies"
+      "Led the company in delivering innovative software solutions",
+      "Developed custom web and mobile applications for clients",
+      "Managed end-to-end software development lifecycle",
+      "Oversaw project delivery, client relations, and team coordination"
+    ]
+  },
+  {
+    role: "Software Developer",
+    company: "UPT TIK Universitas Sebelas Maret, Surakarta",
+    period: "March 2017 - March 2019",
+    technologies: ["PHP", "Yii Framework"],
+    responsibilities: [
+      "Developing university information systems",
+      "Maintaining and upgrading existing applications",
+      "Technical support for university IT infrastructure"
     ]
   }
 ];
 ```
-
-## 🎓 Education & Certifications
-
-**🎓 Formal Education:**
-
-- **S1 Mathematics Education** - Universitas Sebelas Maret, Surakarta (2015-2022)
-- **Science Track** - SMAN 1 Trenggalek (2012-2015)
-
-**📚 Professional Development:**
-
-- **VIP Course** - Laravel, Vue, React, Inertia, NextJs, Tailwind (Parsinta)
-- **Flutter + Laravel** - Build Online Shop (Build With Angga)
-- **Docker + Kubernetes** - Google Cloud Training
-- **Vue.js Fundamental** - DANA
-- **Network Configuration** - UPT TIK Universitas Sebelas Maret
-- **Typography Design & Journalistic** - LPM Kentingan
 
 ## Key Achievements & Stats
 
@@ -286,53 +364,60 @@ const careerJourney = [
 | **Logo Designs** | 200+ Creative Works | Branding for Companies & Organizations |
 | **Experience** | 5+ Years | Full Stack & DevOps Expertise |
 | **Leadership** | Project Management | Cross-functional Team Coordination |
-| **Education** | Mathematics Degree | Problem-solving & Analytical Thinking |
+| **Education** | Mathematics Degree, Bachelor of Information Systems | Problem-solving, Analytical Thinking, Information Systems Expertise |
 
 </div>
 
 ## 🛡️ Core Competencies
 
-```yaml
-Technical_Skills:
-  Backend_Development:
-    - "PHP (Yii2, Laravel, CodeIgniter) - Expert Level"
-    - "Node.js & Express.js - Advanced"
-    - "API Development & Integration"
-    - "Database Design & Optimization"
-  
-  Frontend_Development:
-    - "Vue.js & React - Advanced"
-    - "JavaScript/TypeScript - Expert"
-    - "Responsive Design & UI/UX"
-    - "Progressive Web Apps"
-  
-  Mobile_Development:
-    - "Flutter & React Native"
-    - "Android Native Development"
-    - "Cross-platform Solutions"
-  
-  DevOps_Infrastructure:
-    - "AWS (EC2, S3, RDS) - Advanced"
-    - "Docker & Kubernetes"
-    - "CI/CD Implementation"
-    - "Server Administration (Ubuntu)"
-    - "Network Configuration (Mikrotik)"
-  
-  IoT_Hardware:
-    - "Arduino & ESP32/ESP8266 Programming"
-    - "C++ for Embedded Systems"
-    - "Sensor Integration & Data Collection"
-    - "Hardware-Software Integration"
-    - "Raspberry Pi Development"
+### 💻 Technical Skills
 
-Soft_Skills:
-  - "Team Leadership & Project Management"
-  - "Problem Solving & Critical Thinking"
-  - "Effective Communication"
-  - "Time Management & Multitasking"
-  - "Adaptability & Fast Learning"
-  - "Creative Design Thinking"
-```
+- **Backend Development**
+  - PHP (Yii2, Laravel, CodeIgniter) — Expert
+  - Node.js & Express.js — Advanced
+  - RESTful & GraphQL API Development & Integration
+  - Database Design, Optimization & Management (MySQL, PostgreSQL, Redis, MongoDB)
+  - Microservices Architecture & Serverless Solutions
+
+- **Frontend Development**
+  - Vue.js, React, Angular — Advanced
+  - JavaScript & TypeScript — Expert
+  - Responsive UI/UX Design (Bootstrap, Tailwind CSS, SASS)
+  - Progressive Web Apps (PWA) & SPA Development
+
+- **Mobile Development**
+  - Flutter & React Native — Cross-platform Apps
+  - Android Studio — Native Android Development
+  - Mobile UI/UX & App Store Deployment
+
+- **DevOps & Infrastructure**
+  - AWS (EC2, S3, RDS), Google Cloud — Advanced
+  - Docker, Kubernetes — Containerization & Orchestration
+  - CI/CD Pipeline Implementation (GitHub Actions, GitLab CI)
+  - Server Administration (Ubuntu, Linux)
+  - Network Configuration & Security (Mikrotik, DNS, VPN)
+
+- **IoT & Hardware**
+  - Arduino, ESP32, ESP8266 — Embedded Programming (C++)
+  - Sensor Integration, Data Acquisition & Automation
+  - Hardware-Software Integration & Prototyping
+  - Raspberry Pi Development
+
+- **Design & Creative**
+  - UI/UX Design (Figma, Adobe Illustrator, CorelDraw)
+  - Logo & Branding Design
+  - SVG & Vector Graphics (Inkscape, BoxySVG)
+
+### 🤝 Soft Skills
+
+- Team Leadership & Cross-functional Collaboration
+- Project Management & Agile Methodologies
+- Problem Solving & Analytical Thinking
+- Effective Communication & Technical Documentation
+- Time Management & Multitasking
+- Adaptability & Fast Learning
+- Creative Design Thinking & Innovation
+- Mentorship & Knowledge Sharing
 
 ## 🌟 Professional Values
 
