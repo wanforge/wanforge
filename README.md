@@ -61,7 +61,7 @@ const sugengSulistiyawan = {
     "Enjoying Specialty Coffee ☕"
   ],
   
-  philosophy: "Friendly engineer who believes in continuous learning",
+  philosophy: "Learning Never Ends, Growing One Step at a Time",
 };
 ```
 
