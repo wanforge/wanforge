@@ -2,9 +2,9 @@ name: GitHub-Profile-Summary-Cards
 
 on:
   schedule:
-    # At minute 0 past every 6th hour.
-    # https://crontab.guru/#0_*/6_*_*_*
-    - cron: '0 */6 * * *'
+    # At 00:00 on Monday.
+      # https://crontab.guru/#0_0_*/3_*_*
+      - cron: '0 0 */3 * *'
   workflow_dispatch:
 
 jobs:
