@@ -1,470 +1,359 @@
-<div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=35&duration=3000&pause=1000&color=3B060A&center=true&vCenter=true&random=false&width=1000&height=100&lines=Hello%2C+I'm+Sugeng+Sulistiyawan+👋;Software+Engineer+%26+Full+Stack+Developer;5%2B+Years+Experience+💻;150%2B+Web+Apps+%7C+50%2B+IoT+Projects;From+Trenggalek%2C+East+Java%2C+Indonesia+🇮🇩;Open+Source+Enthusiast+%26+Problem+Solver" alt="Typing SVG" />
-  
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-  
-  [![An image of @sugengsulistiyawan's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/sugengsulistiyawan)](https://holopin.io/@sugengsulistiyawan)
-</div>
+# Sugeng Sulistiyawan
 
-## 🚀 About Me
+**Senior Software Engineer | Full Stack Developer | DevOps Specialist**  
+Tulungagung & Trenggalek, East Java, Indonesia
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/sugengsulistiyawan)
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:sugeng.sulistiyawan@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat&logo=github&logoColor=white)](https://wanforge.github.io)
+[![GitLab](https://img.shields.io/badge/GitLab-FC6D26?style=flat&logo=gitlab&logoColor=white)](https://gitlab.com/wanforge)
+
+---
+
+## Professional Summary
+
+Senior Software Engineer with nearly a decade of professional experience building production-grade systems. Specialized in full-stack development, server automation, infrastructure monitoring, and DevOps engineering. Proven track record of architecting and delivering 150+ scalable web applications and 50+ IoT systems that serve thousands of users daily across healthcare, enterprise, and SME sectors in Indonesia.
+
+Expert in transforming business requirements into robust technical solutions with strong emphasis on automation, observability, and high availability. Experienced in leading development teams, managing complex infrastructure, and implementing DevOps best practices that reduce deployment time by 80% and improve system reliability.
+
+**Current Focus:** Server Automation & Orchestration, Real-time Infrastructure Monitoring, CI/CD Pipeline Optimization, Cloud-Native Architecture, Microservices Development
+
+**Professional Milestones:**
+
+- 10+ years in software development (GitHub member since 2015)
+- 8+ years enterprise experience (professional career since 2017)
+- 150+ production web applications delivered and maintained
+- 50+ IoT systems deployed in industrial and commercial environments
+- 200+ branding and design projects completed
+- Managed infrastructure serving 10,000+ daily active users
+- Led development teams of up to 10 engineers
+- Reduced infrastructure costs by 40% through cloud optimization
+
+---
+
+## What I Bring to the Table
+
+**Full-Stack Development**  
+End-to-end application development from database design to frontend UI/UX, with expertise in PHP (Yii2, Laravel, CodeIgniter), Node.js, Python, and modern JavaScript frameworks (React, Vue.js, Angular).
+
+**DevOps & Infrastructure**  
+Server automation, infrastructure as code, CI/CD pipeline implementation, container orchestration with Docker and Kubernetes, and cloud architecture on AWS, Google Cloud Platform, and on-premises environments.
+
+**Server Automation & Monitoring**  
+Automated deployment workflows, server health monitoring, log aggregation, alert systems, and performance optimization for high-availability production environments.
+
+**IoT & Hardware Integration**  
+Developing embedded systems with Arduino, ESP32, and Raspberry Pi. Building sensor networks, data acquisition systems, and hardware-software integration solutions.
+
+**Technical Leadership**  
+Leading development teams, establishing coding standards, conducting code reviews, and mentoring junior developers. Experience in project management and stakeholder communication.
+
+---
+
+## Technical Expertise
+
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white)
+![Golang](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-CC6699?style=flat&logo=sass&logoColor=white)
+![Yii2](https://img.shields.io/badge/Yii2-1E6887?style=flat&logo=yii&logoColor=white)
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel&logoColor=white)
+![CodeIgniter](https://img.shields.io/badge/CodeIgniter-EF4223?style=flat&logo=codeigniter&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat&logo=vue.js&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat&logo=angular&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)
+![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jquery&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=bootstrap&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat&logo=react&logoColor=61DAFB)
+![Android Studio](https://img.shields.io/badge/Android_Studio-3DDC84?style=flat&logo=android-studio&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazon-aws&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat&logo=google-cloud&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
+![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat&logo=ansible&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat&logo=terraform&logoColor=white)
+![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat&logo=jenkins&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=github-actions&logoColor=white)
+![GitLab CI](https://img.shields.io/badge/GitLab_CI-FC6D26?style=flat&logo=gitlab&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat&logo=nginx&logoColor=white)
+![Apache](https://img.shields.io/badge/Apache-D22128?style=flat&logo=apache&logoColor=white)
+![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat&logo=rabbitmq&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white)
+![Fedora](https://img.shields.io/badge/Fedora-294172?style=flat&logo=fedora&logoColor=white)
+![CentOS](https://img.shields.io/badge/CentOS-262577?style=flat&logo=centos&logoColor=white)
+![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white)
+![ESP32](https://img.shields.io/badge/ESP32-000000?style=flat&logo=espressif&logoColor=white)
+![Raspberry Pi](https://img.shields.io/badge/Raspberry_Pi-A22846?style=flat&logo=raspberry-pi&logoColor=white)
+![Mikrotik](https://img.shields.io/badge/Mikrotik-293239?style=flat&logo=mikrotik&logoColor=white)
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat&logo=figma&logoColor=white)
+![Adobe Illustrator](https://img.shields.io/badge/Adobe_Illustrator-FF9A00?style=flat&logo=adobe-illustrator&logoColor=white)
+![Adobe Photoshop](https://img.shields.io/badge/Adobe_Photoshop-31A8FF?style=flat&logo=adobe-photoshop&logoColor=white)
+![Adobe XD](https://img.shields.io/badge/Adobe_XD-FF61F6?style=flat&logo=adobe-xd&logoColor=white)
+![CorelDRAW](https://img.shields.io/badge/CorelDRAW-00A651?style=flat&logo=coreldraw&logoColor=white)
+![Inkscape](https://img.shields.io/badge/Inkscape-000000?style=flat&logo=inkscape&logoColor=white)
+![Canva](https://img.shields.io/badge/Canva-00C4CC?style=flat&logo=canva&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)
+![Vim](https://img.shields.io/badge/Vim-019733?style=flat&logo=vim&logoColor=white)
+![Notion](https://img.shields.io/badge/Notion-000000?style=flat&logo=notion&logoColor=white)
+![Trello](https://img.shields.io/badge/Trello-0079BF?style=flat&logo=trello&logoColor=white)
+
+---
+
+## Professional Experience
+
+### Full-stack Developer, DevOps, Network Operator & Server Admin
+
+**RSUD dr. Soedomo Trenggalek** | June 2024 - Present
+
+Leading the development and infrastructure management for critical healthcare systems serving thousands of patients and medical staff.
+
+**Key Responsibilities:**
+
+- Architecting and developing healthcare web applications using PHP (Yii2, Laravel), Python, and Node.js
+- Implementing server automation workflows for deployment, backup, and disaster recovery
+- Building monitoring dashboards with Prometheus and Grafana for real-time infrastructure health tracking
+- Managing cloud infrastructure on AWS (EC2, S3, RDS) with auto-scaling and high availability
+- Administering bare-metal and virtual servers running Ubuntu and CentOS
+- Configuring and maintaining network infrastructure with Mikrotik and Ruijie
+- Implementing CI/CD pipelines with GitHub Actions and GitLab CI
+- Database administration and optimization for MySQL and PostgreSQL with replication setup
+- Setting up message queuing systems with RabbitMQ (AMQP) for microservices communication
+- Implementing caching strategies with Redis for performance optimization
+- Developing RESTful APIs and integrating third-party services
+
+**Technologies:** PHP, Python, Yii Framework, Laravel, AngularJS, Node.js, AWS S3, AWS EC2, AWS RDS, Ubuntu Server, CentOS, Bare-metal Servers, RabbitMQ, Redis, MySQL, PostgreSQL, DNS, Mikrotik, Ruijie, Prometheus, Grafana, Nginx, Docker
+
+---
+
+### Freelance Full-Stack Developer & DevOps Engineer
+
+**Self-Employed** | 2015 - Present
+
+Providing comprehensive software development and infrastructure services to 100+ clients including healthcare facilities, enterprises, and SMEs across Indonesia.
+
+**Achievements:**
+
+- **150+ Web Applications:** Delivered custom ERP, CRM, hospital management systems, e-commerce platforms, and business automation tools
+- **50+ IoT Solutions:** Developed smart monitoring systems, sensor networks, industrial automation, and data acquisition systems using Arduino, ESP32, and Raspberry Pi
+- **200+ Design Projects:** Created corporate branding, logo designs, UI/UX designs, and marketing materials
+- **Cloud Migration Projects:** Successfully migrated 30+ legacy applications to cloud infrastructure (AWS, GCP) with improved performance and reduced costs
+- **Server Automation:** Implemented automated deployment, monitoring, and backup solutions for 50+ production servers
+- **Mobile Applications:** Built and published cross-platform mobile apps using Flutter and React Native to Google Play Store and App Store
+
+**Technical Highlights:**
+
+- Implemented Infrastructure as Code using Terraform and Ansible for automated server provisioning
+- Built comprehensive monitoring solutions with Prometheus, Grafana, and ELK Stack
+- Designed and deployed microservices architectures with Docker and Kubernetes
+- Established CI/CD pipelines reducing deployment time by 80%
+- Optimized database queries resulting in 60% performance improvement
+- Implemented automated backup and disaster recovery procedures
+- Configured load balancers and reverse proxies with Nginx for high-traffic applications
+- Set up VPN solutions and network security with Mikrotik routers
+
+**Technologies:** Full-stack web development (PHP, Python, Node.js, React, Vue.js, Angular), Mobile development (Flutter, React Native), Cloud platforms (AWS, Google Cloud), DevOps tools (Docker, Kubernetes, Ansible, Terraform, Jenkins), Databases (MySQL, PostgreSQL, MongoDB, Redis), IoT (Arduino, ESP32, Raspberry Pi), Server administration (Linux, Ubuntu, CentOS)
+
+---
+
+### Full-stack Developer & DevOps Engineer
+
+**Matador Lectro, Surakarta** | August 2023 - May 2024
+
+Led the development of IoT platforms and mobile applications for smart home and industrial automation products.
+
+**Key Contributions:**
+
+- Developed RESTful APIs serving 10,000+ IoT devices using Node.js and PHP
+- Built mobile applications with React Native and Flutter published to Google Play Store
+- Managed AWS infrastructure (EC2, S3, RDS) with automated scaling and monitoring
+- Implemented message queuing with RabbitMQ for reliable device communication
+- Set up Redis caching reducing API response time by 70%
+- Configured CI/CD pipelines with GitHub Actions for automated testing and deployment
+- Implemented SEO strategies improving organic traffic by 150%
+- Administered PostgreSQL and MySQL databases with replication and backup automation
+
+**Technologies:** PHP, Yii Framework, Node.js, Arduino, React Native, Flutter, AWS EC2, AWS S3, AWS RDS, RabbitMQ, Redis, PostgreSQL, MySQL, DNS, Nginx, Docker
+
+---
+
+### Backend Developer & DevOps Engineer
+
+**Matador Lectro, Surakarta** | August 2021 - August 2023
+
+**Achievements:**
+
+- Architected microservices-based backend infrastructure handling 1M+ API requests daily
+- Implemented automated deployment workflows reducing release time from hours to minutes
+- Developed comprehensive API documentation and technical specifications
+- Set up monitoring and alerting systems for proactive issue detection
+- Optimized database queries and indexes improving application performance by 50%
+- Managed cloud infrastructure across AWS and Google Cloud Platform
+- Established coding standards and conducted code reviews for development team
+
+**Technologies:** PHP, Yii Framework, Node.js, Python, AWS, Google Cloud Platform, MySQL, PostgreSQL, Redis, Docker, Git, Nginx, On-premises Infrastructure
+
+---
+
+### Additional Leadership Roles
+
+**Project Manager** | Matador Lectro, Surakarta | September 2022 - August 2023
+
+- Led cross-functional teams of 5-10 developers and designers
+- Managed project budgets averaging IDR 500M+ per project
+- Coordinated with stakeholders and delivered projects on time and within budget
+- Implemented Agile methodologies improving team productivity by 40%
+
+**Firmware Engineer** | Matador Lectro, Surakarta | August 2021 - August 2022
+
+- Developed embedded systems firmware for IoT devices using C++ and Arduino
+- Designed and implemented comprehensive testing procedures for hardware-software integration
+- Optimized firmware reducing power consumption by 30%
+- Collaborated with hardware engineers on PCB design and component selection
+
+**CEO & Developer** | IMPERDEV, Trenggalek | 2022 - 2023
+
+- Founded and led technology startup focused on web and mobile solutions
+- Managed client relationships and business development
+- Oversaw technical architecture and development processes
+
+**Director & COO** | PT Wawasan Maju Nusantara, Trenggalek | 2021 - Present
+
+- Strategic planning and operational management for business development
+- Partnership development and market expansion initiatives
+
+**Technology Innovation & Developer** | Innovation Hub Universitas Sebelas Maret | April 2021 - August 2021
+
+- Developed innovative solutions for university research projects
+- Integrated multiple APIs and third-party services
+- Mentored student developers on modern development practices
+
+**Staff IT** | RSUD Soedomo, Trenggalek | November 2020 - January 2021
+
+- Provided IT support for hospital information systems
+- Database administration and optimization
+- Network configuration and troubleshooting with Mikrotik
+
+**CEO & Developer** | Die Coding Technology, Surakarta | 2017 - Present
+
+- Leading software development company delivering custom solutions
+- Managing project lifecycle from requirements to deployment
+- Building long-term client relationships
+
+**Software Developer** | UPT TIK Universitas Sebelas Maret | March 2017 - March 2019
+
+- Developed university information systems and student portals
+- Maintained and upgraded legacy applications
+- Provided technical support for IT infrastructure
+
+---
+
+## Core Competencies
+
+### Technical Excellence
+
+- **Backend Development:** Expert in PHP (Yii2, Laravel), Node.js, Python (Django, Flask, FastAPI)
+- **Frontend Development:** Advanced proficiency in React, Vue.js, Angular, TypeScript
+- **DevOps & Infrastructure:** Docker, Kubernetes, Ansible, Terraform, CI/CD pipelines
+- **Server Automation:** Bash scripting, Python automation, cron jobs, systemd services
+- **Monitoring & Observability:** Prometheus, Grafana, ELK Stack, application performance monitoring
+- **Cloud Platforms:** AWS (EC2, S3, RDS, Lambda), Google Cloud Platform
+- **Database Management:** MySQL, PostgreSQL, MongoDB, Redis with replication and sharding
+- **Network Administration:** Mikrotik, DNS, VPN, firewall configuration, load balancing
+- **Mobile Development:** Flutter, React Native, native Android
+- **IoT Development:** Arduino, ESP32, Raspberry Pi, sensor integration
+- **Design:** UI/UX design, branding, vector graphics
+
+### Professional Skills
+
+- **Leadership:** Team management, mentoring, technical leadership
+- **Project Management:** Agile/Scrum methodologies, sprint planning, risk management
+- **Communication:** Technical documentation, stakeholder presentations, cross-team collaboration
+- **Problem Solving:** Root cause analysis, debugging, performance optimization
+- **Architecture:** Microservices, scalable systems, security best practices
+- **Business Acumen:** Client relations, requirement gathering, ROI analysis
+
+---
+
+## GitHub Statistics
 
 <p align="center">
-  <img alt="Coding" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" style="max-width:400px; width:100%;">
+  <img src="https://github-readme-stats.vercel.app/api?username=wanforge&show_icons=true&theme=default&hide_border=true&count_private=true" alt="GitHub Stats" height="165">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=wanforge&layout=compact&theme=default&hide_border=true" alt="Top Languages" height="165">
 </p>
 
-```typescript
-const wanforge = {
-  name: "Sugeng Sulistiyawan",
-  title: "Software Engineer & Full Stack Developer",
-  location: "Trenggalek, East Java, Indonesia 🇮🇩",
-  experience: "5+ years",
-  email: "sugeng.sulistiyawan@gmail.com",
-  website: "wanforge.github.io",
-  
-  expertise: {
-    webApplications: "150+ projects delivered",
-    iotProjects: "50+ IoT solutions",
-    logoDesigns: "200+ designs created",
-    experienceYears: 5,
-    teamLeadership: true,
-    devOpsExperience: true
-  },
-  
-  primaryStack: {
-    backend: ["PHP", "Yii2", "Laravel", "Node.js"],
-    frontend: ["Vue.js", "React", "Angular", "JavaScript", "TypeScript"],
-    mobile: ["Flutter", "React Native", "Android Studio"],
-    databases: ["MySQL", "PostgreSQL", "Redis", "MongoDB"],
-    cloud: ["AWS (EC2, S3, RDS)", "Google Cloud"],
-    devOps: ["Docker", "Kubernetes", "CI/CD", "Ubuntu Server"],
-    iot: ["Arduino", "ESP32", "ESP8266", "C++"],
-    design: ["CorelDraw", "Adobe Illustrator", "Figma"],
-    networking: ["Mikrotik", "DNS", "Network Architecture"]
-  },
-  
-  currentRole: "Full-stack Developer, DevOps & Network Operator",
-  currentCompany: "RSUD dr. Soedomo Trenggalek",
-  
-  passions: [
-    "Solving Complex Problems",
-    "Leading & Inspiring Teams",
-    "Open Source Collaboration",
-    "Innovating in IoT & Automation"
-  ],
-  
-  hobbies: [
-    "Exploring New Tech & Reading",
-    "Writing & Sharing Knowledge",
-    "Building IoT Prototypes",
-    "Designing Scalable Architectures",
-    "Creative Coding",
-    "Enjoying Specialty Coffee ☕"
-  ],
-  
-  philosophy: "Learning Never Ends, Growing One Step at a Time",
-};
-```
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=wanforge&theme=default&hide_border=true" alt="GitHub Streak">
+</p>
 
-## 🛠️ Tech Stack
+---
 
-<div align="center">
+## Why Work With Me
 
-### Frontend
+**Proven Track Record:** 10+ years of active development with 150+ successful projects delivered to satisfied clients across Indonesia.
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white)
-![SASS](https://img.shields.io/badge/SASS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D)
-![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+**Full-Stack Expertise:** From database design to frontend UI, from server automation to mobile apps - I handle the complete technology stack.
 
-### Backend & Server
+**DevOps Excellence:** I don't just write code, I ensure it runs reliably in production with proper monitoring, automation, and scalability.
 
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![Yii2](https://img.shields.io/badge/Yii2-1e6887?style=for-the-badge&logo=yii&logoColor=white)
-![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
-![CodeIgniter](https://img.shields.io/badge/CodeIgniter-EF4223?style=for-the-badge&logo=codeigniter&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white)
-![Golang](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+**Business Understanding:** I understand that technology serves business goals. I focus on delivering solutions that drive real value and ROI.
 
-### Mobile Development
+**Communication:** I translate complex technical concepts into clear language for stakeholders and provide comprehensive documentation.
 
-![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![Android Studio](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)
+**Continuous Learning:** Always staying current with latest technologies and best practices to deliver cutting-edge solutions.
 
-### IoT & Hardware
+---
 
-![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
-![ESP (ESP32/ESP8266)](https://img.shields.io/badge/ESP%20(ESP32%2FESP8266)-000000?style=for-the-badge&logo=espressif&logoColor=white)
-![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=for-the-badge&logo=Raspberry%20Pi&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+## Let's Build Something Great
 
-### Database & Cloud
+I'm always interested in challenging projects that push the boundaries of what's possible. Whether you need a scalable web application, infrastructure automation, IoT integration, or complete digital transformation - let's talk.
 
-![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![Amazon AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
+**Open to:**
 
-### DevOps & Infrastructure
+- Full-time positions in DevOps, Full-Stack Development, or Technical Leadership roles
+- Consulting engagements for infrastructure optimization and automation
+- Freelance projects for web applications, mobile apps, and IoT solutions
+- Technical advisory and mentorship opportunities
 
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-![Fedora](https://img.shields.io/badge/Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Mikrotik](https://img.shields.io/badge/Mikrotik-293239?style=for-the-badge&logo=mikrotik&logoColor=white)
+---
 
-### Design & Creative
+## Contact
 
-![CorelDRAW](https://img.shields.io/badge/CorelDRAW-00A651?style=for-the-badge&logo=coreldraw&logoColor=white)
-![Adobe Illustrator](https://img.shields.io/badge/Adobe_Illustrator-FF9A00?style=for-the-badge&logo=adobe-illustrator&logoColor=white)
-![Adobe Photoshop](https://img.shields.io/badge/Adobe_Photoshop-31A8FF?style=for-the-badge&logo=adobe-photoshop&logoColor=white)
-![Adobe XD](https://img.shields.io/badge/Adobe_XD-FF61F6?style=for-the-badge&logo=adobe-xd&logoColor=white)
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
-![Inkscape](https://img.shields.io/badge/Inkscape-000000?style=for-the-badge&logo=inkscape&logoColor=white)
-![Canva](https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white)
-![BoxySVG](https://img.shields.io/badge/BoxySVG-FF6F00?style=for-the-badge&logo=boxysvg&logoColor=white)
+**Email:** sugeng.sulistiyawan@gmail.com  
+**Portfolio:** [wanforge.github.io](https://wanforge.github.io)  
+**LinkedIn:** [linkedin.com/in/sugengsulistiyawan](https://linkedin.com/in/sugengsulistiyawan)  
+**GitHub:** [github.com/wanforge](https://github.com/wanforge)  
+**GitLab:** [gitlab.com/wanforge](https://gitlab.com/wanforge)
 
-### Tools & Others
+---
 
-![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Microsoft Office](https://img.shields.io/badge/Microsoft_Office-D83B01?style=for-the-badge&logo=microsoft-office&logoColor=white)
-![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white)
-![Trello](https://img.shields.io/badge/Trello-0079BF?style=for-the-badge&logo=trello&logoColor=white)
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=wanforge&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views">
+  <a href="https://github.com/wanforge?tab=followers"><img src="https://img.shields.io/github/followers/wanforge.svg?style=flat&label=Follow&maxAge=2592000" alt="GitHub followers"></a>
+</p>
 
-</div>
-
-## 📊 GitHub Statistics
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=wanforge&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="GitHub Stats" height="165">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=wanforge&layout=compact&theme=radical&hide_border=true" alt="Top Languages" height="165">
-</div>
-
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=wanforge&theme=radical&hide_border=true" alt="GitHub Streak" width="400">
-</div>
-
-### 📈 Contribution Graph
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=wanforge&theme=react-dark&hide_border=true&area=true" width="100%">
-</div>
-
-### 🏆 GitHub Trophies
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=wanforge&theme=radical&no-frame=true&no-bg=true&margin-w=4&row=1" alt="GitHub Trophies">
-</div>
-
-## 📱 Connect with me
-
-<div align="center">
-  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/sugengsulistiyawan)
-[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sugeng.sulistiyawan@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-7C3AED?style=for-the-badge&logo=todoist&logoColor=white)](https://wanforge.github.io)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/wanforge)
-[![GitLab](https://img.shields.io/badge/GitLab-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white)](https://gitlab.com/wanforge)
-[![Instagram](https://img.shields.io/badge/Instagram-%23C13584?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/wanforge)
-
-</div>
-
-## 🎯 Current Focus & Role
-
-- 🏥 **Current Position:** Full-stack Developer, DevOps & Network Operator at **RSUD dr. Soedomo Trenggalek**
-- 🔭 Currently working on **Healthcare Web Applications & Infrastructure**
-- 🌱 Learning **Advanced Cloud Architecture & Network Security**
-- � **Achievements:** 150+ Web Applications | 50+ IoT Projects | 200+ Logo Designs
-- 👥 **Leadership:** Team management & project coordination experience
-- 💬 Ask me about **PHP/Yii2, Laravel, Vue.js, React, Node.js, IoT, DevOps**
-- 📫 How to reach me: **<sugeng.sulistiyawan@gmail.com>**
-- ⚡ Fun fact: **Friendly engineer who loves problem-solving and continuous learning!**
-
-## 💼 Professional Experience Highlights
-
-```javascript
-const careerJourney = [
-  {
-    role: "Full-stack Developer, DevOps, Network Operator (NOC) & Server Admin",
-    company: "RSUD dr. Soedomo Trenggalek",
-    period: "June 2024 - Present",
-    technologies: ["PHP", "Yii Framework", "Laravel", "AngularJS", "Node.js", "S3", "Ubuntu Server", "Baremetal Server", "AMQP", "Redis", "MySQL", "PostgreSQL", "DNS", "Mikrotik", "Ruijie"],
-    responsibilities: [
-      "Developing healthcare web applications",
-      "Building and maintaining frontend with Angular and React",
-      "Implementing backend services using Node.js and Python",
-      "Server configuration & maintenance",
-      "Network infrastructure management",
-      "Database optimization (MySQL, PostgreSQL)"
-    ]
-  },
-  {
-    role: "Freelance Developer & Designer",
-    period: "2015 - Present",
-    specialization: "Empowering UMKM (SMEs) & Organizations Across Indonesia",
-    technologies: [
-      "PHP", "Yii2", "Laravel", "Node.js", "Vue.js", "React", "Angular", "JavaScript", "TypeScript",
-      "Flutter", "React Native", "Android Studio",
-      "MySQL", "PostgreSQL", "Redis", "MongoDB",
-      "AWS (EC2, S3, RDS)", "Google Cloud",
-      "Docker", "Kubernetes", "CI/CD", "Ubuntu Server",
-      "Arduino", "ESP32", "ESP8266", "C++",
-      "CorelDraw", "Adobe Illustrator", "Figma",
-      "Mikrotik", "DNS", "Network Architecture"
-    ],
-    achievements: [
-      "Delivered 150+ custom web applications for healthcare, business, and education sectors",
-      "Developed 50+ IoT solutions including smart sensors, automation, and monitoring systems",
-      "Created 200+ logo and branding designs for companies, startups, and communities",
-      "Built cross-platform mobile apps using Flutter and React Native for SMEs and entrepreneurs",
-      "Implemented scalable cloud infrastructure and DevOps pipelines (AWS, Google Cloud, Docker, Kubernetes, CI/CD)",
-      "Configured and maintained servers (Ubuntu, Linux) for web hosting and application deployment",
-      "Optimized network infrastructure with Mikrotik, DNS, and secure VPN solutions",
-      "Provided end-to-end digitalization: UI/UX design, frontend (Vue.js, React, Angular), backend (PHP, Laravel, Node.js, Yii2), database, and server management",
-      "Established and managed CI/CD pipelines for automated testing and deployment",
-      "Supported digital transformation for local businesses through technology consulting, training, and open source collaboration"
-    ]
-  },
-  {
-    role: "Full-stack Developer & DevOps",
-    company: "Matador Lectro, Surakarta", 
-    period: "August 2023 - May 2024",
-    technologies: ["PHP", "Yii Framework", "Node.js", "Arduino", "React Native", "Flutter", "AWS", "S3", "EC2", "RDS", "AMQP", "Redis", "Google Play Console", "SEO", "MySQL", "PostgreSQL", "DNS"],
-    achievements: [
-      "Developing web & mobile applications",
-      "Configuring & maintaining servers",
-      "Publishing apps to Google Play Store",
-      "Managing cloud infrastructure (EC2, S3, RDS)",
-      "Implementing SEO optimization strategies"
-    ]
-  },
-  {
-    role: "Backend Developer & DevOps",
-    company: "Matador Lectro, Surakarta",
-    period: "August 2021 - 2023", 
-    technologies: ["PHP", "Yii Framework", "Node.js", "AWS", "Google Console Developer", "MySQL", "PostgreSQL", "S3", "Cloud VPS", "DNS"],
-    achievements: [
-      "Followed policies and procedures related to application methods and quality standards",
-      "Created detailed technical and user documentation",
-      "Effectively coded software changes based on design specifications",
-      "Managed cloud infrastructure and deployment processes"
-    ]
-  },
-  {
-    role: "Project Manager",
-    company: "Matador Lectro, Surakarta",
-    period: "September 2022 - 2023", 
-    tools: ["Notion", "Trello"],
-    achievements: [
-      "Worked with the overall mission of the company to effectively convey and promote the company's brand",
-      "Collaborated with cross-functional teams to achieve project goals in a timely manner",
-      "Managed and implemented project budget and requirements",
-      "Provided project updates to stakeholders and supervisors"
-    ]
-  },
-  {
-    role: "Firmware Engineer", 
-    company: "Matador Lectro, Surakarta",
-    period: "August 2021 - August 2022",
-    technologies: ["Arduino", "C++", "ESP"],
-    achievements: [
-      "Oversaw and planned electrical specifications for new systems",
-      "Created and implemented comprehensive test plans", 
-      "Accurately diagnosed and directed system issues",
-      "Developed advanced design options for structures and systems",
-      "Worked to create improvements that optimized production",
-      "Collaborated with other engineers to solve problems and enhance processes"
-    ]
-  },
-  {
-    role: "CEO & Developer",
-    company: "IMPERDEV, Trenggalek",
-    period: "2022 - 2023",
-    focus: "Technology startup and future development projects"
-  },
-  {
-    role: "Director & COO",
-    company: "PT Wawasan Maju Nusantara, Trenggalek",
-    period: "2021 - Present",
-    focus: "Strategic planning and operational management for future business development"
-  },
-  {
-    role: "Technology Innovation & Developer",
-    company: "Innovation Hub Universitas Sebelas Maret, Surakarta",
-    period: "April 2021 - August 2021",
-    technologies: ["PHP", "Yii Framework", "Node.js", "AWS", "Google Console Developer", "MySQL", "PostgreSQL", "S3", "Cloud VPS", "DNS", "Integrated API"],
-    focus: "Innovation and technology development in university environment"
-  },
-  {
-    role: "Heat of Developer",
-    company: "Youth Power Action, Trenggalek",
-    period: "February 2021 - August 2021",
-    focus: "Leading development initiatives for youth empowerment projects"
-  },
-  {
-    role: "Staff IT",
-    company: "RSUD Soedomo, Trenggalek",
-    period: "November 2020 - January 2021",
-    technologies: ["PHP", "Yii Framework", "Laravel", "CodeIgniter", "Node.js", "AWS", "PostgreSQL", "Mikrotik"],
-    responsibilities: [
-      "IT support and system maintenance",
-      "Database management and optimization",
-      "Network configuration and troubleshooting"
-    ]
-  },
-  {
-    role: "CEO & Developer",
-    company: "Die Coding Technology, Surakarta",
-    period: "2017 - Present",
-    focus: "Technology company leadership and software development projects",
-    achievements: [
-      "Led the company in delivering innovative software solutions",
-      "Developed custom web and mobile applications for clients",
-      "Managed end-to-end software development lifecycle",
-      "Oversaw project delivery, client relations, and team coordination"
-    ]
-  },
-  {
-    role: "Software Developer",
-    company: "UPT TIK Universitas Sebelas Maret, Surakarta",
-    period: "March 2017 - March 2019",
-    technologies: ["PHP", "Yii Framework"],
-    responsibilities: [
-      "Developing university information systems",
-      "Maintaining and upgrading existing applications",
-      "Technical support for university IT infrastructure"
-    ]
-  }
-];
-```
-
-## Key Achievements & Stats
-
-<div align="center">
-
-| 🎯 **Category**       | 📊 **Achievement**                                   | 📈 **Impact**                                                        |
-| -------------------- | --------------------------------------------------- | ------------------------------------------------------------------- |
-| **Web Applications** | 150+ Projects Delivered                             | Healthcare, Business & SME Solutions                                |
-| **IoT Projects**     | 50+ Hardware Solutions                              | Smart Systems & Automation                                          |
-| **Logo Designs**     | 200+ Creative Works                                 | Branding for Companies & Organizations                              |
-| **Experience**       | 5+ Years                                            | Full Stack & DevOps Expertise                                       |
-| **Leadership**       | Project Management                                  | Cross-functional Team Coordination                                  |
-| **Education**        | Mathematics Degree, Bachelor of Information Systems | Problem-solving, Analytical Thinking, Information Systems Expertise |
-
-</div>
-
-## 🛡️ Core Competencies
-
-### 💻 Technical Skills
-
-- **Backend Development**
-  - PHP (Yii2, Laravel, CodeIgniter) — Expert
-  - Node.js & Express.js — Advanced
-  - RESTful & GraphQL API Development & Integration
-  - Database Design, Optimization & Management (MySQL, PostgreSQL, Redis, MongoDB)
-  - Microservices Architecture & Serverless Solutions
-
-- **Frontend Development**
-  - Vue.js, React, Angular — Advanced
-  - JavaScript & TypeScript — Expert
-  - Responsive UI/UX Design (Bootstrap, Tailwind CSS, SASS)
-  - Progressive Web Apps (PWA) & SPA Development
-
-- **Mobile Development**
-  - Flutter & React Native — Cross-platform Apps
-  - Android Studio — Native Android Development
-  - Mobile UI/UX & App Store Deployment
-
-- **DevOps & Infrastructure**
-  - AWS (EC2, S3, RDS), Google Cloud — Advanced
-  - Docker, Kubernetes — Containerization & Orchestration
-  - CI/CD Pipeline Implementation (GitHub Actions, GitLab CI)
-  - Server Administration (Ubuntu, Linux)
-  - Network Configuration & Security (Mikrotik, DNS, VPN)
-
-- **IoT & Hardware**
-  - Arduino, ESP32, ESP8266 — Embedded Programming (C++)
-  - Sensor Integration, Data Acquisition & Automation
-  - Hardware-Software Integration & Prototyping
-  - Raspberry Pi Development
-
-- **Design & Creative**
-  - UI/UX Design (Figma, Adobe Illustrator, CorelDraw)
-  - Logo & Branding Design
-  - SVG & Vector Graphics (Inkscape, BoxySVG)
-
-### 🤝 Soft Skills
-
-- Team Leadership & Cross-functional Collaboration
-- Project Management & Agile Methodologies
-- Problem Solving & Analytical Thinking
-- Effective Communication & Technical Documentation
-- Time Management & Multitasking
-- Adaptability & Fast Learning
-- Creative Design Thinking & Innovation
-- Mentorship & Knowledge Sharing
-
-## 🌟 Professional Values
-
-- **🤝 Collaboration:** Experienced in working with cross-functional teams and stakeholders
-- **🎯 Results-Driven:** Focus on delivering high-quality solutions that meet business objectives  
-- **📚 Continuous Learning:** Always exploring new technologies and best practices
-- **💡 Innovation:** Bringing creative solutions to complex technical challenges
-- **🔧 Problem Solving:** Strong analytical skills with attention to detail
-- **🌱 Mentorship:** Passionate about sharing knowledge and supporting team growth
-
-## 📊 Detailed GitHub Analytics
-
-<div align="center">
-
-[![](profile-summary-card-output/github/0-profile-details.svg)](profile-summary-card-output/github/0-profile-details.svg)
-[![](profile-summary-card-output/github/1-repos-per-language.svg)](profile-summary-card-output/github/1-repos-per-language.svg) [![](profile-summary-card-output/github/2-most-commit-language.svg)](profile-summary-card-output/github/2-most-commit-language.svg)
-[![](profile-summary-card-output/github/3-stats.svg)](profile-summary-card-output/github/3-stats.svg) [![](profile-summary-card-output/github/4-productive-time.svg)](profile-summary-card-output/github/4-productive-time.svg)
-
-</div>
-
-## 💰 Support My Work
-
-<div align="center">
-  
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/wanforge)
-[![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/wanforge)
-
-</div>
-
-## � Hobbies & Interests
-
-Beyond coding, I enjoy a variety of activities that help me stay balanced and innovative:
-
-- **📚 Reading:** Staying updated with tech trends and expanding knowledge
-- **✍️ Writing:** Sharing experiences and technical insights through blogs
-- **🔧 IoT Prototyping:** Building smart home devices and automation systems
-- **�️ Software Architecture:** Designing scalable and maintainable systems
-- **💻 Open Source Contributing:** Contributing to community projects and libraries
-- **🎨 UI/UX Design:** Creating intuitive and user-friendly interfaces
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-  <br>
-
-  ![Profile Views](https://komarev.com/ghpvc/?username=wanforge&label=Profile%20views&color=0e75b6&style=flat)
-  [![GitHub followers](https://img.shields.io/github/followers/wanforge.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/wanforge?tab=followers)
-  
-  <h3>⭐ Show some love by starring some repositories! ⭐</h3>
-</div>
+<p align="center">
+  <i>Building robust systems, one commit at a time since 2015</i>
+</p>
