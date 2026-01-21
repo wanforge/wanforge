@@ -299,14 +299,13 @@ Led the development of IoT platforms and mobile applications for smart home and 
 
 ## GitHub Statistics
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=wanforge&show_icons=true&theme=default&hide_border=true&count_private=true" alt="GitHub Stats" height="165">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=wanforge&layout=compact&theme=default&hide_border=true" alt="Top Languages" height="165">
-</p>
+<div align="center">
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=wanforge&theme=default&hide_border=true" alt="GitHub Streak">
-</p>
+[![](profile-summary-card-output/github/0-profile-details.svg)](profile-summary-card-output/github/0-profile-details.svg)
+[![](profile-summary-card-output/github/1-repos-per-language.svg)](profile-summary-card-output/github/1-repos-per-language.svg) [![](profile-summary-card-output/github/2-most-commit-language.svg)](profile-summary-card-output/github/2-most-commit-language.svg)
+[![](profile-summary-card-output/github/3-stats.svg)](profile-summary-card-output/github/3-stats.svg) [![](profile-summary-card-output/github/4-productive-time.svg)](profile-summary-card-output/github/4-productive-time.svg)
+
+</div>
 
 ---
 
