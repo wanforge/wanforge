@@ -1,6 +1,6 @@
 # Sugeng Sulistiyawan
 
-**Senior Software Engineer | Full Stack Developer | DevOps Specialist**  
+**Senior Full-Stack Engineer | DevOps & Infrastructure | Networking | Database | IoT & Embedded Systems | UI/UX**  
 Tulungagung & Trenggalek, East Java, Indonesia
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0E76A8?style=flat&logo=linux&logoColor=white)](https://linkedin.com/in/sugengsulistiyawan)
