@@ -63,6 +63,18 @@ microservices for healthcare systems at **RSUD dr. Soedomo Trenggalek**.
   <img src="https://img.shields.io/badge/ESP32-000000?style=flat&logo=espressif&logoColor=white">
 </p>
 
+### Server Toolkit
+
+One-command, multi-distro Linux server setup &amp; hardening — a grouped checkbox
+launcher for packages, firewall, SSH, CloudPanel, Cockpit, databases, Node.js,
+Composer, and PM2. Open source under GPL-3.0.
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/install.sh | bash
+```
+
+➜ source: [`.shell/`](.shell) · pick what you need, it runs the rest in order.
+
 ### GitHub
 
 <div align="center">
