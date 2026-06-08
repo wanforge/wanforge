@@ -51,6 +51,15 @@ curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/ins
 
 # Install CloudPanel CE v2 (Debian/Ubuntu only)
 curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/install-cloudpanel.sh | bash
+
+# Install Cockpit web console + modules (Debian/Ubuntu)
+curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/install-cockpit.sh | bash
+
+# Install PostgreSQL, create roles, optional remote access
+curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/install-postgresql.sh | bash
+
+# Allow remote MySQL/MariaDB access (sensitive)
+curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/enable-mysql-remote.sh | bash
 ```
 
 ## Scripts
@@ -63,6 +72,9 @@ curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/ins
 | `install-firewall.sh`   | Install `ufw`, open OpenSSH/http/https, add custom ports, enable | Yes         |
 | `install-fail2ban.sh`   | Install and enable the Fail2Ban service                          | Yes         |
 | `install-cloudpanel.sh` | Install CloudPanel CE v2, choose DB engine, verify checksum      | Yes         |
+| `install-cockpit.sh`    | Install Cockpit + modules, reverse-proxy config, open port 9090  | Yes         |
+| `install-postgresql.sh` | Install PostgreSQL, create roles (interactive), remote access    | Yes         |
+| `enable-mysql-remote.sh`| Set bind-address and firewall for remote MySQL/MariaDB access    | Yes         |
 
 ## Launcher Flow
 
@@ -87,6 +99,13 @@ flowchart TD
   `install-cloudpanel.sh` from the official CloudPanel docs.
 - **Firewall**: `ufw` is mainly for Debian/Ubuntu. On other distros the script
   attempts to install it from the respective repository.
+- **Database credentials**: `install-postgresql.sh` asks for role names and
+  passwords interactively. No passwords are stored in these scripts.
+- **Remote database access**: `install-postgresql.sh` and `enable-mysql-remote.sh`
+  expose the database to the network. Prefer a restricted source CIDR over
+  `0.0.0.0/0`, and place the server behind a firewall or private network.
+- **Cockpit reverse proxy**: `AllowUnencrypted = true` is only safe when TLS is
+  terminated by the proxy (e.g. CloudPanel) in front of Cockpit.
 - **Disable colors**: set `NO_COLOR=1` before running.
 
 ## License
