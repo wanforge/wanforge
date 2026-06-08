@@ -86,6 +86,9 @@ SCRIPTS=(
   "install-cockpit|.shell/install-cockpit.sh|Install Cockpit web console + modules (Debian/Ubuntu)"
   "install-postgresql|.shell/install-postgresql.sh|Install PostgreSQL + create roles + remote access"
   "enable-mysql-remote|.shell/enable-mysql-remote.sh|Allow remote MySQL/MariaDB access (sensitive)"
+  "install-nodejs|.shell/install-nodejs.sh|Install Node.js via nvm (user-local) + PM2"
+  "install-composer|.shell/install-composer.sh|Install Composer (user-local, signature-verified)"
+  "secure-ssh|.shell/secure-ssh.sh|Harden SSH: change port, disable root/password, pubkey"
 )
 # ------------------------------------------------------------------------
 

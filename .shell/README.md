@@ -60,6 +60,15 @@ curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/ins
 
 # Allow remote MySQL/MariaDB access (sensitive)
 curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/enable-mysql-remote.sh | bash
+
+# Install Node.js via nvm (user-local) + PM2
+curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/install-nodejs.sh | bash
+
+# Install Composer (user-local, signature-verified)
+curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/install-composer.sh | bash
+
+# Harden SSH (change port, disable root/password, pubkey)
+curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/secure-ssh.sh | bash
 ```
 
 ## Scripts
@@ -75,6 +84,9 @@ curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/ena
 | `install-cockpit.sh`    | Install Cockpit + modules, reverse-proxy config, open port 9090  | Yes         |
 | `install-postgresql.sh` | Install PostgreSQL, create roles (interactive), remote access    | Yes         |
 | `enable-mysql-remote.sh`| Set bind-address and firewall for remote MySQL/MariaDB access    | Yes         |
+| `install-nodejs.sh`     | Install Node.js via nvm (user-local, no sudo), choose version, PM2 | Yes       |
+| `install-composer.sh`   | Install Composer to `~/.local/bin` (no sudo), verify signature   | No          |
+| `secure-ssh.sh`         | Change SSH port, disable root/password login, enable pubkey auth | Yes         |
 
 ## Launcher Flow
 
@@ -106,6 +118,12 @@ flowchart TD
   `0.0.0.0/0`, and place the server behind a firewall or private network.
 - **Cockpit reverse proxy**: `AllowUnencrypted = true` is only safe when TLS is
   terminated by the proxy (e.g. CloudPanel) in front of Cockpit.
+- **Node.js / Composer**: installed in the current user's home, no `sudo`. PM2
+  boot startup (`pm2 startup`) is optional and needs `sudo` for systemd.
+- **SSH hardening**: `secure-ssh.sh` can lock you out. It opens the new port in
+  `ufw` before restarting, validates with `sshd -t`, backs up the config, and
+  refuses to disable password auth without an `authorized_keys` present. Keep
+  your current session open and test the new port before closing it.
 - **Disable colors**: set `NO_COLOR=1` before running.
 
 ## License
