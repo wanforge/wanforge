@@ -8,6 +8,9 @@
 # Shows a menu of available scripts, then fetches and runs the chosen one.
 # Auth (username + PAT) is OPTIONAL — only needed for scripts in private repos.
 #
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Sugeng Sulistiyawan
+#
 set -euo pipefail
 
 # --- colors --------------------------------------------------------------
@@ -30,8 +33,19 @@ banner() {
 '╚███╔███╔╝██║  ██║██║ ╚████║██║     ╚██████╔╝██║  ██║╚██████╔╝███████╗'
 ' ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝      ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚══════╝'
   )
-  # vertical gradient: cyan -> blue -> violet -> magenta
-  local grad=(51 45 39 99 135 171)
+  # preset gradient themes; one is picked at random each run
+  local themes=(
+    "51 45 39 99 135 171"   # cyan -> magenta
+    "46 48 50 45 39 33"     # green -> blue
+    "214 208 202 196 160 124" # orange -> red
+    "93 99 135 171 207 213" # purple -> pink
+    "226 220 214 208 202 196" # fire
+    "51 45 39 33 27 21"     # ocean
+    "196 208 226 46 51 93"  # rainbow
+    "201 165 129 93 57 21"  # violet -> blue
+  )
+  local pick=$(( RANDOM % ${#themes[@]} ))
+  read -r -a grad <<< "${themes[$pick]}"
   printf "\n" >&2
   local i=0
   for l in "${lines[@]}"; do
@@ -43,7 +57,7 @@ banner() {
     i=$((i + 1))
     sleep 0.05
   done
-  printf "%b        ⚡ wanforge deploy • script launcher%b\n\n" "${C_DIM}" "${C_RESET}" >&2
+  printf "%b        ⚡ wanforge deploy • MIT © 2026 Sugeng Sulistiyawan%b\n\n" "${C_DIM}" "${C_RESET}" >&2
 }
 
 spinner() {
@@ -68,7 +82,8 @@ REPO_BRANCH="master"
 
 # Script registry — add new scripts here as: "label|path-in-repo|description"
 SCRIPTS=(
-  "install-server|.shell/deploy/install-server.sh|Update system + install base packages (multi-distro)"
+  "install-server|.shell/deploy/install-server.sh|Update system + base packages, timezone, firewall, fail2ban"
+  "install-cloudpanel|.shell/deploy/install-cloudpanel.sh|Install CloudPanel CE v2 (Debian/Ubuntu only)"
 )
 # ------------------------------------------------------------------------
 
