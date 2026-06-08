@@ -47,6 +47,7 @@ warn() { printf "    %b!%b %s\n" "${C_YELLOW}" "${C_RESET}" "$1" >&2; }
 err()  { printf "    %b✖%b %s\n" "${C_RED}" "${C_RESET}" "$1" >&2; }
 if [ -e /dev/tty ]; then exec 3</dev/tty; else exec 3<&0; fi
 ask() { local prompt="$1" def="${2:-}" ans; printf "%b?%b %s " "${C_YELLOW}" "${C_RESET}" "${prompt}" >&2; read -r ans <&3 || ans=""; echo "${ans:-$def}"; }
+asks() { local prompt="$1" ans; printf "%b?%b %s " "${C_YELLOW}" "${C_RESET}" "${prompt}" >&2; read -rs ans <&3 || ans=""; printf "\n" >&2; echo "${ans}"; }
 if [ "$(id -u)" -eq 0 ]; then SUDO=""; else SUDO="sudo"; fi
 
 # ---- run ----------------------------------------------------------------
@@ -92,7 +93,42 @@ case "${PROCEED}" in
     fi
     warn "Remember to grant DB users a host that matches remote clients (e.g. 'user'@'%')."
     ;;
-  *) info "Aborted; no changes made." ;;
+  *) info "Skipped bind-address change." ;;
+esac
+
+# ---- create remote DB users (optional, independent of bind-address) -----
+ADDU="$(ask "Create remote database user(s) now? [y/N]:" "n")"
+case "${ADDU}" in
+  y|Y|yes)
+    # admin connection: try root socket auth via sudo, else ask root password
+    MYSQL=(${SUDO} mysql)
+    if ! ${SUDO} mysql -e 'SELECT 1' >/dev/null 2>&1; then
+      RPW="$(asks 'MySQL/MariaDB root password:')"
+      MYSQL=(mysql -uroot -p"${RPW}")
+    fi
+    if ! "${MYSQL[@]}" -e 'SELECT 1' >/dev/null 2>&1; then
+      err "Cannot connect as admin. Skipping user creation."
+    else
+      while true; do
+        MORE="$(ask 'Add a user? [y/N]:' 'n')"; case "${MORE}" in y|Y|yes) ;; *) break ;; esac
+        DU="$(ask 'New DB username:')"
+        if ! [[ "${DU}" =~ ^[a-zA-Z0-9_]+$ ]]; then warn "Invalid username (letters/digits/underscore)."; continue; fi
+        DPW="$(asks "Password for ${DU}:")"; [ -z "${DPW}" ] && { warn "Empty password; skipping."; continue; }
+        HOSTP="$(ask "Allowed host ('%'=any, or a specific client IP):" '%')"
+        DBN="$(ask "Grant on database ('*'=all databases):" '*')"
+        DPW_ESC="${DPW//\'/\'\'}"   # escape single quotes for the SQL literal
+        if [ "${DBN}" = "*" ]; then GRANTOBJ='*.*'; else GRANTOBJ="\`${DBN}\`.*"; fi
+        SQL="CREATE USER IF NOT EXISTS '${DU}'@'${HOSTP}' IDENTIFIED BY '${DPW_ESC}'; GRANT ALL PRIVILEGES ON ${GRANTOBJ} TO '${DU}'@'${HOSTP}'; FLUSH PRIVILEGES;"
+        if printf '%s\n' "${SQL}" | "${MYSQL[@]}" 2>/dev/null; then
+          ok "Created '${DU}'@'${HOSTP}' with privileges on ${GRANTOBJ}."
+        else
+          err "Failed to create ${DU} (admin access? duplicate user?)."
+        fi
+        unset DPW DPW_ESC
+      done
+    fi
+    ;;
+  *) info "No remote users created." ;;
 esac
 
 printf "\n%b✔ MySQL remote-access step finished.%b\n\n" "${C_BOLD}${C_GREEN}" "${C_RESET}" >&2

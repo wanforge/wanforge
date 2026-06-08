@@ -68,7 +68,9 @@ ${SUDO} systemctl enable --now pmcd pmlogger 2>/dev/null || warn "Could not enab
 RP_ANS="$(ask "Configure Cockpit behind a reverse proxy (CloudPanel)? [y/N]:" "n")"
 case "${RP_ANS}" in
   y|Y|yes)
-    ORIGIN="$(ask "Allowed origin (e.g. https://cockpit.domain.id):" "")"
+    # bare domain only — TLS/https is terminated at CloudPanel in front of Cockpit
+    ORIGIN="$(ask "Allowed origin domain (e.g. cockpit.domain.id):" "")"
+    ORIGIN="${ORIGIN#http://}"; ORIGIN="${ORIGIN#https://}"   # strip any scheme if pasted
     if [ -z "${ORIGIN}" ]; then
       warn "No origin given; skipping cockpit.conf."
     else
