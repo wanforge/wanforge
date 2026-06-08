@@ -83,6 +83,7 @@ SCRIPTS=(
   "Security|install-firewall|.shell/install-firewall.sh|Install & configure ufw firewall"
   "Security|install-fail2ban|.shell/install-fail2ban.sh|Install & enable Fail2Ban"
   "Security|secure-ssh|.shell/secure-ssh.sh|Harden SSH: change port, disable root/password, pubkey"
+  "Security|generate-ssh-key|.shell/generate-ssh-key.sh|Generate an ed25519 SSH key (user-local)"
   "Panel & Console|install-cloudpanel|.shell/install-cloudpanel.sh|Install CloudPanel CE v2 (Debian/Ubuntu only)"
   "Panel & Console|clpctl-manager|.shell/clpctl-manager.sh|Manage CloudPanel via clpctl (sites, db, users, certs)"
   "Panel & Console|install-cockpit|.shell/install-cockpit.sh|Install Cockpit web console + modules (Debian/Ubuntu)"
