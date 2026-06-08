@@ -52,7 +52,7 @@ banner() {
     fi
     i=$((i + 1)); sleep 0.04
   done
-  printf "%b        install-cloudpanel • MIT © 2026 Sugeng Sulistiyawan%b\n\n" "${C_DIM}" "${C_RESET}" >&2
+  printf "%b        wanforge.asia · install-cloudpanel • MIT © 2026 Sugeng Sulistiyawan%b\n\n" "${C_DIM}" "${C_RESET}" >&2
 }
 
 STEP=0; TOTAL=3
