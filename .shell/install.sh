@@ -8,7 +8,7 @@
 # Shows a menu of available scripts, then fetches and runs the chosen one.
 # Auth (username + PAT) is OPTIONAL — only needed for scripts in private repos.
 #
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: GPL-3.0-or-later
 # Copyright (c) 2026 Sugeng Sulistiyawan
 #
 set -euo pipefail
@@ -55,7 +55,7 @@ banner() {
     i=$((i + 1))
     sleep 0.05
   done
-  printf "%b        wanforge.asia • MIT © 2026 Sugeng Sulistiyawan%b\n\n" "${C_DIM}" "${C_RESET}" >&2
+  printf "%b        wanforge.asia • GPLv3 © 2026 Sugeng Sulistiyawan%b\n\n" "${C_DIM}" "${C_RESET}" >&2
 }
 
 spinner() {

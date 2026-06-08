@@ -229,4 +229,5 @@ flowchart TD
 
 ## License
 
-MIT. Copyright (c) 2026 Sugeng Sulistiyawan. See `LICENSE`.
+GNU General Public License v3.0 (GPL-3.0). Copyright (c) 2026 Sugeng Sulistiyawan.
+See [`LICENSE`](LICENSE).

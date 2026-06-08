@@ -10,7 +10,7 @@
 # Usage:
 #   curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/clpctl-manager.sh | bash
 #
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: GPL-3.0-or-later
 # Copyright (c) 2026 Sugeng Sulistiyawan
 #
 set -euo pipefail
@@ -42,7 +42,7 @@ banner() {
     else printf "%s\n" "$l" >&2; fi
     i=$((i + 1)); sleep 0.04
   done
-  printf "%b        wanforge.asia · %s • MIT © 2026 Sugeng Sulistiyawan%b\n\n" "${C_DIM}" "${TASK}" "${C_RESET}" >&2
+  printf "%b        wanforge.asia · %s • GPLv3 © 2026 Sugeng Sulistiyawan%b\n\n" "${C_DIM}" "${TASK}" "${C_RESET}" >&2
 }
 info() { printf "    %b•%b %s\n" "${C_DIM}" "${C_RESET}" "$1" >&2; }
 ok()   { printf "    %b✔%b %s\n" "${C_GREEN}" "${C_RESET}" "$1" >&2; }

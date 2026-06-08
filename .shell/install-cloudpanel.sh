@@ -7,7 +7,7 @@
 # Usage (public repo, no auth needed):
 #   curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/install-cloudpanel.sh | bash
 #
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: GPL-3.0-or-later
 # Copyright (c) 2026 Sugeng Sulistiyawan
 #
 set -euo pipefail
@@ -51,7 +51,7 @@ banner() {
     fi
     i=$((i + 1)); sleep 0.04
   done
-  printf "%b        wanforge.asia · install-cloudpanel • MIT © 2026 Sugeng Sulistiyawan%b\n\n" "${C_DIM}" "${C_RESET}" >&2
+  printf "%b        wanforge.asia · install-cloudpanel • GPLv3 © 2026 Sugeng Sulistiyawan%b\n\n" "${C_DIM}" "${C_RESET}" >&2
 }
 
 STEP=0; TOTAL=3
