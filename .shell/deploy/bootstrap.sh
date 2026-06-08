@@ -16,11 +16,11 @@ set -euo pipefail
 # --- colors --------------------------------------------------------------
 if [ -t 2 ] && [ -z "${NO_COLOR:-}" ]; then
   C_RESET="\033[0m"; C_BOLD="\033[1m"; C_DIM="\033[2m"
-  C_GREEN="\033[38;5;46m"; C_YELLOW="\033[38;5;226m"
+  C_RED="\033[38;5;196m"; C_GREEN="\033[38;5;46m"; C_YELLOW="\033[38;5;226m"; C_CYAN="\033[38;5;45m"
   USE_COLOR=1
 else
   C_RESET=""; C_BOLD=""; C_DIM=""
-  C_GREEN=""; C_YELLOW=""
+  C_RED=""; C_GREEN=""; C_YELLOW=""; C_CYAN=""
   USE_COLOR=0
 fi
 
@@ -33,16 +33,14 @@ banner() {
 '╚███╔███╔╝██║  ██║██║ ╚████║██║     ╚██████╔╝██║  ██║╚██████╔╝███████╗'
 ' ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝      ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚══════╝'
   )
-  # preset gradient themes; one is picked at random each run
+  # single-hue gradients (light -> dark, one tone); one picked at random each run
   local themes=(
-    "51 45 39 99 135 171"   # cyan -> magenta
-    "46 48 50 45 39 33"     # green -> blue
-    "214 208 202 196 160 124" # orange -> red
-    "93 99 135 171 207 213" # purple -> pink
-    "226 220 214 208 202 196" # fire
-    "51 45 39 33 27 21"     # ocean
-    "196 208 226 46 51 93"  # rainbow
-    "201 165 129 93 57 21"  # violet -> blue
+    "51 50 44 38 37 31"     # cyan
+    "45 39 33 32 26 21"     # blue
+    "48 42 36 35 29 28"     # green
+    "141 135 134 98 92 91"  # purple
+    "218 212 211 205 199 198" # pink
+    "215 214 208 202 173 166" # orange
   )
   local pick=$(( RANDOM % ${#themes[@]} ))
   read -r -a grad <<< "${themes[$pick]}"
