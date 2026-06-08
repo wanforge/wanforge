@@ -57,7 +57,7 @@ banner() {
     i=$((i + 1))
     sleep 0.05
   done
-  printf "%b        ⚡ wanforge deploy • MIT © 2026 Sugeng Sulistiyawan%b\n\n" "${C_DIM}" "${C_RESET}" >&2
+  printf "%b        wanforge.asia • MIT © 2026 Sugeng Sulistiyawan%b\n\n" "${C_DIM}" "${C_RESET}" >&2
 }
 
 spinner() {
@@ -73,8 +73,6 @@ spinner() {
   printf "\r%b✔%b %s\n" "${C_GREEN}" "${C_RESET}" "$msg" >&2
 }
 
-banner
-
 # --- config: source repo -------------------------------------------------
 REPO_OWNER="wanforge"
 REPO_NAME="wanforge"
@@ -82,7 +80,10 @@ REPO_BRANCH="master"
 
 # Script registry — add new scripts here as: "label|path-in-repo|description"
 SCRIPTS=(
-  "install-server|.shell/deploy/install-server.sh|Update system + base packages, timezone, firewall, fail2ban"
+  "install-packages|.shell/deploy/install-packages.sh|Update system + install base packages (multi-distro)"
+  "set-timezone|.shell/deploy/set-timezone.sh|Set timezone (default Asia/Jakarta)"
+  "install-firewall|.shell/deploy/install-firewall.sh|Install & configure ufw firewall"
+  "install-fail2ban|.shell/deploy/install-fail2ban.sh|Install & enable Fail2Ban"
   "install-cloudpanel|.shell/deploy/install-cloudpanel.sh|Install CloudPanel CE v2 (Debian/Ubuntu only)"
 )
 # ------------------------------------------------------------------------
@@ -95,27 +96,58 @@ else
   exit 1
 fi
 
-# --- menu ----------------------------------------------------------------
-printf "%bAvailable scripts:%b\n" "${C_BOLD}" "${C_RESET}" >&2
-idx=1
-for entry in "${SCRIPTS[@]}"; do
-  IFS='|' read -r m_label _ m_desc <<< "${entry}"
-  printf "  %b%d%b) %-16s %b%s%b\n" \
-    "${C_YELLOW}" "${idx}" "${C_RESET}" "${m_label}" "${C_DIM}" "${m_desc}" "${C_RESET}" >&2
-  idx=$((idx + 1))
-done
+# --- checkbox multi-select menu ------------------------------------------
+# Populates the global array SELECTED with chosen indices. ↑/↓ move,
+# SPACE toggle, A toggle-all, ENTER confirm, Q quit.
+SELECTED=()
+checkbox_menu() {
+  local n=${#SCRIPTS[@]} i cursor=0 first=1 key rest
+  local -a checked
+  for ((i = 0; i < n; i++)); do checked[i]=0; done
 
-printf "\nSelect [1-%d] (default 1): " "${#SCRIPTS[@]}" >&2
-read -r CHOICE <&3
-CHOICE="${CHOICE:-1}"
+  printf "%bSelect scripts to run:%b  %b↑/↓ move · SPACE toggle · A all · ENTER run · Q quit%b\n\n" \
+    "${C_BOLD}" "${C_RESET}" "${C_DIM}" "${C_RESET}" >&2
 
-if ! [[ "${CHOICE}" =~ ^[0-9]+$ ]] || [ "${CHOICE}" -lt 1 ] || [ "${CHOICE}" -gt "${#SCRIPTS[@]}" ]; then
-  echo "Invalid selection: ${CHOICE}" >&2
-  exit 1
+  while true; do
+    [ "$first" -eq 0 ] && printf "\033[%dA" "$n" >&2
+    first=0
+    for ((i = 0; i < n; i++)); do
+      IFS='|' read -r lbl _ dsc <<< "${SCRIPTS[i]}"
+      local box="[ ]"; [ "${checked[i]}" -eq 1 ] && box="[x]"
+      printf "\033[2K" >&2
+      if [ "$i" -eq "$cursor" ]; then
+        printf "%b❯ %s %-20s%b %b%s%b\n" "${C_CYAN}${C_BOLD}" "$box" "$lbl" "${C_RESET}" "${C_DIM}" "$dsc" "${C_RESET}" >&2
+      else
+        printf "  %b%s%b %-20s %b%s%b\n" "${C_GREEN}" "$box" "${C_RESET}" "$lbl" "${C_DIM}" "$dsc" "${C_RESET}" >&2
+      fi
+    done
+
+    IFS= read -rsn1 key <&3 || break
+    if [ "$key" = $'\x1b' ]; then IFS= read -rsn2 -t 0.01 rest <&3 || rest=""; key+="$rest"; fi
+    case "$key" in
+      $'\x1b[A'|k) cursor=$(( (cursor - 1 + n) % n )) ;;
+      $'\x1b[B'|j) cursor=$(( (cursor + 1) % n )) ;;
+      ' ') checked[cursor]=$(( 1 - checked[cursor] )) ;;
+      a|A)
+        local all=1; for ((i = 0; i < n; i++)); do [ "${checked[i]}" -eq 0 ] && all=0; done
+        for ((i = 0; i < n; i++)); do checked[i]=$(( 1 - all )); done ;;
+      q|Q) SELECTED=(); return 1 ;;
+      '') break ;;  # Enter
+    esac
+  done
+
+  for ((i = 0; i < n; i++)); do [ "${checked[i]}" -eq 1 ] && SELECTED+=("$i"); done
+}
+
+banner
+checkbox_menu || { printf "\n%bCancelled.%b\n" "${C_YELLOW}" "${C_RESET}" >&2; exit 0; }
+
+if [ "${#SELECTED[@]}" -eq 0 ]; then
+  printf "\n%bNothing selected.%b\n" "${C_YELLOW}" "${C_RESET}" >&2
+  exit 0
 fi
 
-IFS='|' read -r SEL_LABEL SCRIPT_PATH _ <<< "${SCRIPTS[$((CHOICE - 1))]}"
-printf "\n%bSelected:%b %s\n\n" "${C_GREEN}" "${C_RESET}" "${SEL_LABEL}" >&2
+printf "\n%bSelected %d script(s).%b\n\n" "${C_GREEN}" "${#SELECTED[@]}" "${C_RESET}" >&2
 
 # --- optional auth (private repos only) ----------------------------------
 PAT_URL="https://github.com/settings/tokens/new?scopes=repo&description=wanforge-deploy"
@@ -137,15 +169,20 @@ if [ -n "${GH_USER}" ]; then
   AUTH=(-u "${GH_USER}:${GH_TOKEN}")
 fi
 
-# --- fetch + run ---------------------------------------------------------
-RAW_URL="https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${REPO_BRANCH}/${SCRIPT_PATH}"
-
+# --- fetch + run each selected script, in menu order ---------------------
 TMP_SCRIPT="$(mktemp)"
 trap 'rm -f "${TMP_SCRIPT}"' EXIT
 
-curl -fsSL "${AUTH[@]}" "${RAW_URL}" -o "${TMP_SCRIPT}" &
-spinner $! "Fetching ${SCRIPT_PATH}"
-wait $! || { echo "Download failed (check selection / token / repo)." >&2; exit 1; }
+for sel in "${SELECTED[@]}"; do
+  IFS='|' read -r SEL_LABEL SCRIPT_PATH _ <<< "${SCRIPTS[$sel]}"
+  RAW_URL="https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${REPO_BRANCH}/${SCRIPT_PATH}"
 
-printf "%b▶ running %s...%b\n\n" "${C_BOLD}${C_GREEN}" "${SEL_LABEL}" "${C_RESET}" >&2
-bash "${TMP_SCRIPT}"
+  curl -fsSL "${AUTH[@]}" "${RAW_URL}" -o "${TMP_SCRIPT}" &
+  spinner $! "Fetching ${SEL_LABEL}"
+  wait $! || { echo "Download failed: ${SCRIPT_PATH} (check token / repo)." >&2; exit 1; }
+
+  printf "%b▶ running %s...%b\n" "${C_BOLD}${C_GREEN}" "${SEL_LABEL}" "${C_RESET}" >&2
+  bash "${TMP_SCRIPT}" || { err_msg="${SEL_LABEL} exited non-zero"; printf "%b✖ %s%b\n" "${C_BOLD}" "${err_msg}" "${C_RESET}" >&2; }
+done
+
+printf "\n%b✔ All selected scripts finished.%b\n\n" "${C_BOLD}${C_GREEN}" "${C_RESET}" >&2
