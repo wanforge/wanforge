@@ -89,6 +89,7 @@ SCRIPTS=(
   "install-nodejs|.shell/install-nodejs.sh|Install Node.js via nvm (user-local) + PM2"
   "install-composer|.shell/install-composer.sh|Install Composer (user-local, signature-verified)"
   "secure-ssh|.shell/secure-ssh.sh|Harden SSH: change port, disable root/password, pubkey"
+  "setup-pm2-app|.shell/setup-pm2-app.sh|Configure pm2-logrotate + register an app (ecosystem)"
 )
 # ------------------------------------------------------------------------
 
