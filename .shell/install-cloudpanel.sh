@@ -5,7 +5,7 @@
 # Docs: https://www.cloudpanel.io/docs/v2/getting-started/other/
 #
 # Usage (public repo, no auth needed):
-#   curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/deploy/install-cloudpanel.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/install-cloudpanel.sh | bash
 #
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2026 Sugeng Sulistiyawan
