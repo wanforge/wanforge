@@ -55,12 +55,32 @@ psql_super() { ${SUDO} -u postgres psql -v ON_ERROR_STOP=1 "$@"; }
 banner
 if ! command -v apt-get >/dev/null 2>&1; then err "This script targets Debian/Ubuntu (apt)."; exit 1; fi
 
-info "Installing PostgreSQL..."
-${SUDO} apt-get update
+# Add the official PostgreSQL APT repository (PGDG) to get the latest version.
+add_pgdg_repo() {
+  info "Configuring PGDG repository for the latest PostgreSQL..."
+  ${SUDO} apt-get install -y curl ca-certificates gnupg
+  ${SUDO} install -d /usr/share/postgresql-common/pgdg
+  ${SUDO} curl -fsSL -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc \
+    https://www.postgresql.org/media/keys/ACCC4CF8.asc
+  # shellcheck disable=SC1091
+  . /etc/os-release
+  echo "deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt ${VERSION_CODENAME}-pgdg main" \
+    | ${SUDO} tee /etc/apt/sources.list.d/pgdg.list >/dev/null
+}
+
+info "Installing the latest PostgreSQL..."
+if add_pgdg_repo; then
+  ${SUDO} apt-get update
+else
+  warn "PGDG repo setup failed; falling back to the distro package."
+  ${SUDO} apt-get update
+fi
+# 'postgresql' meta-package pulls the newest available major version.
 ${SUDO} apt-get install -y postgresql postgresql-contrib
 ${SUDO} systemctl enable postgresql >/dev/null 2>&1 || true
 ${SUDO} systemctl start postgresql || true
-ok "PostgreSQL installed and running."
+PG_VER="$(${SUDO} -u postgres psql -tAc 'SHOW server_version;' 2>/dev/null || echo '?')"
+ok "PostgreSQL ${PG_VER} installed and running."
 
 # ---- create login roles (interactive, no hardcoded secrets) -------------
 info "Create login roles. Passwords are entered interactively, never stored in this script."
