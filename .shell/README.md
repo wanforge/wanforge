@@ -113,9 +113,11 @@ curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/set
 ### install-packages.sh
 
 - Detects the package manager: `apt`, `dnf`, `yum`, `pacman`, `zypper`, `apk`.
-- Refreshes the index, upgrades installed packages, installs base tooling
-  (`micro`, `curl`, `wget`, `git`, `python3` + pip/dev/virtualenv, `speedtest-cli`).
-- Cleans up afterwards. Falls back to `pip3` for `speedtest-cli` where missing.
+- **Grouped checkbox menu** (default all on, uncheck to skip): System actions
+  (update / upgrade / cleanup) plus per-package selection grouped by Editor,
+  Network, VCS, Diagnostics, and Python — each with a description.
+- Package names are resolved per distro; falls back to `pip3` for
+  `speedtest-cli` where the repo package is missing.
 
 ### set-timezone.sh
 
@@ -177,13 +179,18 @@ curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/set
 
 ### install-cockpit.sh
 
-- Debian/Ubuntu only. Installs Cockpit plus `networkmanager`, `storaged`,
-  `sosreport`, `pcp` modules and enables `pmcd`/`pmlogger`.
-- Optional reverse-proxy config writes `/etc/cockpit/cockpit.conf` with
-  `AllowOrigins` (bare domain, e.g. `cockpit.domain.id` — TLS is terminated by
-  CloudPanel), `ProtocolHeader`, and `AllowUnencrypted`. Add the matching domain
-  in CloudPanel as a reverse proxy to `http://127.0.0.1:9090`.
-- Opens port `9090` in `ufw`. Console at `http://127.0.0.1:9090`.
+- Debian/Ubuntu only. **Grouped checkbox menu** (default all on, uncheck to skip):
+  - **Core** — install Cockpit; open port `9090` in `ufw` (skip if proxied).
+  - **Proxy** — write `/etc/cockpit/cockpit.conf` with `AllowOrigins` (bare
+    domain, e.g. `cockpit.domain.id` — TLS terminated by CloudPanel),
+    `ProtocolHeader`, `AllowUnencrypted`. Add the domain in CloudPanel as a
+    reverse proxy to `http://127.0.0.1:9090`.
+  - **Network** — install NetworkManager and set the netplan renderer (with a
+    backup and an explicit `yes` confirmation, since it can drop SSH).
+  - **Plugins** — `networkmanager`, `storaged`, `sosreport`, `pcp`, `machines`,
+    `podman` (each individually selectable).
+  - **Metrics** — enable `pmcd` + `pmlogger`.
+- Console at `http://127.0.0.1:9090`.
 
 ### install-postgresql.sh
 
