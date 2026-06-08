@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 #
-# bootstrap.sh — interactive loader for a PRIVATE GitHub deploy script.
+# bootstrap.sh — interactive launcher for wanforge deploy scripts.
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/<user>/<repo>/<branch>/.shell/deploy/bootstrap.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/deploy/bootstrap.sh | bash
 #
-# It prompts for GitHub username + token (PAT), then fetches and runs
-# setup-server.sh from the private repo.
+# Shows a menu of available scripts, then fetches and runs the chosen one.
+# Auth (username + PAT) is OPTIONAL — only needed for scripts in private repos.
 #
 set -euo pipefail
 
@@ -43,7 +43,7 @@ banner() {
     i=$((i + 1))
     sleep 0.05
   done
-  printf "%b        ⚡ server bootstrap • github private deploy%b\n\n" "${C_DIM}" "${C_RESET}" >&2
+  printf "%b        ⚡ wanforge deploy • script launcher%b\n\n" "${C_DIM}" "${C_RESET}" >&2
 }
 
 spinner() {
@@ -61,11 +61,15 @@ spinner() {
 
 banner
 
-# --- config: points at the public wanforge repo --------------------------
+# --- config: source repo -------------------------------------------------
 REPO_OWNER="wanforge"
 REPO_NAME="wanforge"
 REPO_BRANCH="master"
-SCRIPT_PATH=".shell/deploy/setup-server.sh"
+
+# Script registry — add new scripts here as: "label|path-in-repo|description"
+SCRIPTS=(
+  "install-server|.shell/deploy/install-server.sh|Update system + install base packages (multi-distro)"
+)
 # ------------------------------------------------------------------------
 
 # When run via `curl | bash`, stdin is the pipe, so read from the terminal.
@@ -76,30 +80,57 @@ else
   exit 1
 fi
 
-PAT_URL="https://github.com/settings/tokens/new?scopes=repo&description=server-bootstrap"
-printf "%bGenerate a token (PAT) here:%b\n  %b%s%b\n\n" \
-  "${C_DIM}" "${C_RESET}" "${C_YELLOW}" "${PAT_URL}" "${C_RESET}" >&2
+# --- menu ----------------------------------------------------------------
+printf "%bAvailable scripts:%b\n" "${C_BOLD}" "${C_RESET}" >&2
+idx=1
+for entry in "${SCRIPTS[@]}"; do
+  IFS='|' read -r m_label _ m_desc <<< "${entry}"
+  printf "  %b%d%b) %-16s %b%s%b\n" \
+    "${C_YELLOW}" "${idx}" "${C_RESET}" "${m_label}" "${C_DIM}" "${m_desc}" "${C_RESET}" >&2
+  idx=$((idx + 1))
+done
 
-printf "GitHub username: " >&2
-read -r GH_USER <&3
+printf "\nSelect [1-%d] (default 1): " "${#SCRIPTS[@]}" >&2
+read -r CHOICE <&3
+CHOICE="${CHOICE:-1}"
 
-printf "GitHub token (PAT, hidden): " >&2
-read -rs GH_TOKEN <&3
-printf "\n" >&2
-
-if [ -z "${GH_USER}" ] || [ -z "${GH_TOKEN}" ]; then
-  echo "Username and token are required." >&2
+if ! [[ "${CHOICE}" =~ ^[0-9]+$ ]] || [ "${CHOICE}" -lt 1 ] || [ "${CHOICE}" -gt "${#SCRIPTS[@]}" ]; then
+  echo "Invalid selection: ${CHOICE}" >&2
   exit 1
 fi
 
+IFS='|' read -r SEL_LABEL SCRIPT_PATH _ <<< "${SCRIPTS[$((CHOICE - 1))]}"
+printf "\n%bSelected:%b %s\n\n" "${C_GREEN}" "${C_RESET}" "${SEL_LABEL}" >&2
+
+# --- optional auth (private repos only) ----------------------------------
+PAT_URL="https://github.com/settings/tokens/new?scopes=repo&description=wanforge-deploy"
+printf "%bAuth is only needed for PRIVATE repos. Press Enter to skip.%b\n" "${C_DIM}" "${C_RESET}" >&2
+printf "%bGenerate a token (PAT):%b %b%s%b\n" "${C_DIM}" "${C_RESET}" "${C_YELLOW}" "${PAT_URL}" "${C_RESET}" >&2
+
+printf "GitHub username (Enter to skip): " >&2
+read -r GH_USER <&3
+
+AUTH=()
+if [ -n "${GH_USER}" ]; then
+  printf "GitHub token (PAT, hidden): " >&2
+  read -rs GH_TOKEN <&3
+  printf "\n" >&2
+  if [ -z "${GH_TOKEN}" ]; then
+    echo "Token required when username is given." >&2
+    exit 1
+  fi
+  AUTH=(-u "${GH_USER}:${GH_TOKEN}")
+fi
+
+# --- fetch + run ---------------------------------------------------------
 RAW_URL="https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${REPO_BRANCH}/${SCRIPT_PATH}"
 
 TMP_SCRIPT="$(mktemp)"
 trap 'rm -f "${TMP_SCRIPT}"' EXIT
 
-curl -fsSL -u "${GH_USER}:${GH_TOKEN}" "${RAW_URL}" -o "${TMP_SCRIPT}" &
+curl -fsSL "${AUTH[@]}" "${RAW_URL}" -o "${TMP_SCRIPT}" &
 spinner $! "Fetching ${SCRIPT_PATH}"
-wait $! || { echo "Download failed (check username/token/repo)." >&2; exit 1; }
+wait $! || { echo "Download failed (check selection / token / repo)." >&2; exit 1; }
 
-printf "%b▶ running setup...%b\n\n" "${C_BOLD}${C_GREEN}" "${C_RESET}" >&2
+printf "%b▶ running %s...%b\n\n" "${C_BOLD}${C_GREEN}" "${SEL_LABEL}" "${C_RESET}" >&2
 bash "${TMP_SCRIPT}"

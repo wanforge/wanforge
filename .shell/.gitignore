@@ -1,0 +1,34 @@
+# PUBLIC REPO — never commit secrets here.
+
+# Environment / secrets
+*.env
+.env
+.env.*
+*.secret
+*secret*
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+*.gpg
+*.asc
+
+# Tokens / credentials
+*token*
+*credential*
+*password*
+.netrc
+.npmrc
+auth.json
+
+# Local overrides
+*.local
+local.*
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*~

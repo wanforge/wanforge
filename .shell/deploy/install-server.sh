@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2086  # package lists are intentionally word-split
 #
-# setup-server.sh — multi-distro Linux server setup.
+# install-server.sh — multi-distro Linux server setup.
 # Auto-detects the package manager: apt, dnf, yum, pacman, zypper, apk.
 #
 # Usage (public repo, no auth needed):
-#   curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/deploy/setup-server.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/deploy/install-server.sh | bash
 #
 set -euo pipefail
 
