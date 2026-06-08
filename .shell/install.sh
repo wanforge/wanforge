@@ -155,7 +155,15 @@ fi
 printf "\n%bSelected %d script(s).%b\n\n" "${C_GREEN}" "${#SELECTED[@]}" "${C_RESET}" >&2
 
 # --- optional auth (private repos only) ----------------------------------
-PAT_URL="https://github.com/settings/tokens/new?scopes=repo&description=wanforge-deploy"
+# Build a descriptive PAT label: host, login user, and public IP, so the token
+# is easy to identify (and revoke) per server.
+PAT_HOST="$(hostname 2>/dev/null || echo host)"
+PAT_USER="${USER:-$(whoami 2>/dev/null || echo user)}"
+PAT_IP="$(curl -fsS --max-time 4 https://api.ipify.org 2>/dev/null || echo noip)"
+PAT_DESC="wanforge-deploy ${PAT_USER}@${PAT_HOST} ${PAT_IP}"
+# URL-encode spaces and '@' for the query string
+PAT_DESC="${PAT_DESC// /%20}"; PAT_DESC="${PAT_DESC//@/%40}"
+PAT_URL="https://github.com/settings/tokens/new?scopes=repo&description=${PAT_DESC}"
 printf "%bAuth is only needed for PRIVATE repos. Press Enter to skip.%b\n" "${C_DIM}" "${C_RESET}" >&2
 printf "%bGenerate a token (PAT):%b %b%s%b\n" "${C_DIM}" "${C_RESET}" "${C_YELLOW}" "${PAT_URL}" "${C_RESET}" >&2
 
