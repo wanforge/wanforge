@@ -44,6 +44,7 @@ Select scripts to run:  ↑/↓ move · SPACE toggle · A all · ENTER run · Q 
   [ ] install-firewall     Install & configure ufw firewall
   [ ] install-fail2ban     Install & enable Fail2Ban
   [ ] secure-ssh           Harden SSH: change port, disable root/password, pubkey
+  [ ] generate-ssh-key     Generate an ed25519 SSH key (user-local)
 ── Panel & Console ──
   [ ] install-cloudpanel   Install CloudPanel CE v2 (Debian/Ubuntu only)
   [ ] clpctl-manager       Manage CloudPanel via clpctl (sites, db, users, certs)
@@ -70,6 +71,7 @@ curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/set
 curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/install-firewall.sh | bash
 curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/install-fail2ban.sh | bash
 curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/secure-ssh.sh | bash
+curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/generate-ssh-key.sh | bash
 
 # Panels & consoles
 curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/install-cloudpanel.sh | bash
@@ -96,6 +98,7 @@ curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/set
 | Security      | `install-firewall.sh`    | Install `ufw`, open SSH/http/https, add custom ports, enable     | Yes  | Mainly Deb/Ubu  |
 | Security      | `install-fail2ban.sh`    | Install and enable the Fail2Ban service                          | Yes  | Multi           |
 | Security      | `secure-ssh.sh`          | Change SSH port, disable root/password login, enable pubkey      | Yes  | Any (OpenSSH)   |
+| Security      | `generate-ssh-key.sh`    | Generate an ed25519 SSH key, fix perms, print public key         | No   | Any             |
 | Panel & Console | `install-cloudpanel.sh`| Install CloudPanel CE v2, choose DB engine, verify checksum      | Yes  | Debian/Ubuntu   |
 | Panel & Console | `clpctl-manager.sh`    | Manage CloudPanel via `clpctl`: sites, db, users, certs, vhosts  | Yes  | CloudPanel      |
 | Panel & Console | `install-cockpit.sh`   | Install Cockpit + modules, reverse-proxy config, open port 9090  | Yes  | Debian/Ubuntu   |
@@ -139,6 +142,15 @@ curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/set
 - **Anti-lockout**: opens the new port in `ufw` before restarting, validates with
   `sshd -t`, and refuses to disable password auth when no `authorized_keys` exists.
 - Asks before restarting and before removing the old port-22 rule.
+
+### generate-ssh-key.sh
+
+- Generates an `ed25519` key in `~/.ssh` (no sudo). Prompts for the file path,
+  comment (default `wanforge-asia@<hostname>`), and an optional passphrase.
+- Refuses to overwrite an existing key without confirmation. Sets `~/.ssh` to
+  `700`, the private key to `600`, the public key to `644`.
+- Prints the fingerprint and the public key to paste into GitHub/GitLab
+  (Settings → SSH/Deploy Keys).
 
 ### install-cloudpanel.sh
 
