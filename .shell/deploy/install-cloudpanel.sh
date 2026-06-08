@@ -116,19 +116,19 @@ curl -sS "${INSTALLER}" -o install.sh
 
 info "Verifying SHA-256 checksum..."
 ACTUAL_SHA="$(sha256sum install.sh | awk '{print $1}')"
-if [ "${ACTUAL_SHA}" = "${EXPECTED_SHA}" ]; then
-  ok "Checksum verified."
-else
-  warn "Checksum mismatch."
+# Fail closed: a mismatch means the file is untrusted (tampered) OR the pinned
+# hash is stale for a new release. Either way we refuse to run unverified code.
+# To install a newer release, update EXPECTED_SHA from the official CloudPanel
+# docs after confirming the published hash.
+if [ "${ACTUAL_SHA}" != "${EXPECTED_SHA}" ]; then
+  err "Checksum mismatch — refusing to run unverified installer."
   info "expected: ${EXPECTED_SHA}"
   info "actual:   ${ACTUAL_SHA}"
-  warn "The installer may have been updated, or the file is untrusted."
-  CONT="$(ask "Continue anyway? [y/N]:" "n")"
-  case "${CONT}" in
-    y|Y|yes) warn "Proceeding without checksum match." ;;
-    *) err "Aborting for safety."; exit 1 ;;
-  esac
+  info "If a new CloudPanel release shipped, update EXPECTED_SHA from:"
+  info "  https://www.cloudpanel.io/docs/v2/getting-started/other/"
+  exit 1
 fi
+ok "Checksum verified."
 
 info "Running CloudPanel installer (DB_ENGINE=${DB_ENGINE})..."
 ${SUDO} DB_ENGINE="${DB_ENGINE}" bash install.sh
