@@ -76,21 +76,21 @@ REPO_OWNER="wanforge"
 REPO_NAME="wanforge"
 REPO_BRANCH="master"
 
-# Script registry — "label|path-in-repo|description|group". Keep groups contiguous.
+# Script registry — "group|label|path-in-repo|description". Keep groups contiguous.
 SCRIPTS=(
-  "install-packages|.shell/install-packages.sh|Update system + install base packages (multi-distro)|System"
-  "set-timezone|.shell/set-timezone.sh|Set timezone (default Asia/Jakarta)|System"
-  "install-firewall|.shell/install-firewall.sh|Install & configure ufw firewall|Security"
-  "install-fail2ban|.shell/install-fail2ban.sh|Install & enable Fail2Ban|Security"
-  "secure-ssh|.shell/secure-ssh.sh|Harden SSH: change port, disable root/password, pubkey|Security"
-  "install-cloudpanel|.shell/install-cloudpanel.sh|Install CloudPanel CE v2 (Debian/Ubuntu only)|Panel & Console"
-  "clpctl-manager|.shell/clpctl-manager.sh|Manage CloudPanel via clpctl (sites, db, users, certs)|Panel & Console"
-  "install-cockpit|.shell/install-cockpit.sh|Install Cockpit web console + modules (Debian/Ubuntu)|Panel & Console"
-  "install-postgresql|.shell/install-postgresql.sh|Install PostgreSQL + create roles + remote access|Database"
-  "enable-mysql-remote|.shell/enable-mysql-remote.sh|Allow remote MySQL/MariaDB access (sensitive)|Database"
-  "install-nodejs|.shell/install-nodejs.sh|Install Node.js via nvm (user-local) + PM2|App Runtime"
-  "install-composer|.shell/install-composer.sh|Install Composer (user-local, signature-verified)|App Runtime"
-  "setup-pm2-app|.shell/setup-pm2-app.sh|Configure pm2-logrotate + register an app (ecosystem)|App Runtime"
+  "System|install-packages|.shell/install-packages.sh|Update system + install base packages (multi-distro)"
+  "System|set-timezone|.shell/set-timezone.sh|Set timezone (default Asia/Jakarta)"
+  "Security|install-firewall|.shell/install-firewall.sh|Install & configure ufw firewall"
+  "Security|install-fail2ban|.shell/install-fail2ban.sh|Install & enable Fail2Ban"
+  "Security|secure-ssh|.shell/secure-ssh.sh|Harden SSH: change port, disable root/password, pubkey"
+  "Panel & Console|install-cloudpanel|.shell/install-cloudpanel.sh|Install CloudPanel CE v2 (Debian/Ubuntu only)"
+  "Panel & Console|clpctl-manager|.shell/clpctl-manager.sh|Manage CloudPanel via clpctl (sites, db, users, certs)"
+  "Panel & Console|install-cockpit|.shell/install-cockpit.sh|Install Cockpit web console + modules (Debian/Ubuntu)"
+  "Database|install-postgresql|.shell/install-postgresql.sh|Install PostgreSQL + create roles + remote access"
+  "Database|enable-mysql-remote|.shell/enable-mysql-remote.sh|Allow remote MySQL/MariaDB access (sensitive)"
+  "App Runtime|install-nodejs|.shell/install-nodejs.sh|Install Node.js via nvm (user-local) + PM2"
+  "App Runtime|install-composer|.shell/install-composer.sh|Install Composer (user-local, signature-verified)"
+  "App Runtime|setup-pm2-app|.shell/setup-pm2-app.sh|Configure pm2-logrotate + register an app (ecosystem)"
 )
 # ------------------------------------------------------------------------
 
@@ -114,7 +114,7 @@ checkbox_menu() {
   # total rendered lines = items + one header per distinct (contiguous) group
   local groups=0 pg=""
   for ((i = 0; i < n; i++)); do
-    IFS='|' read -r _ _ _ g <<< "${SCRIPTS[i]}"
+    IFS='|' read -r g _ <<< "${SCRIPTS[i]}"
     [ "$g" != "$pg" ] && { groups=$((groups + 1)); pg="$g"; }
   done
   local total=$((n + groups))
@@ -127,7 +127,7 @@ checkbox_menu() {
     first=0
     prev=""
     for ((i = 0; i < n; i++)); do
-      IFS='|' read -r lbl _ dsc g <<< "${SCRIPTS[i]}"
+      IFS='|' read -r g lbl _ dsc <<< "${SCRIPTS[i]}"
       if [ "$g" != "$prev" ]; then
         printf "\033[2K%b── %s ──%b\n" "${C_BOLD}${C_YELLOW}" "$g" "${C_RESET}" >&2
         prev="$g"
@@ -202,7 +202,7 @@ TMP_SCRIPT="$(mktemp)"
 trap 'rm -f "${TMP_SCRIPT}"' EXIT
 
 for sel in "${SELECTED[@]}"; do
-  IFS='|' read -r SEL_LABEL SCRIPT_PATH _ <<< "${SCRIPTS[$sel]}"
+  IFS='|' read -r _ SEL_LABEL SCRIPT_PATH _ <<< "${SCRIPTS[$sel]}"
   RAW_URL="https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${REPO_BRANCH}/${SCRIPT_PATH}"
 
   curl -fsSL "${AUTH[@]}" "${RAW_URL}" -o "${TMP_SCRIPT}" &
