@@ -50,6 +50,7 @@ curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/sec
 
 # Panels & consoles
 curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/install-cloudpanel.sh | bash
+curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/clpctl-manager.sh | bash
 curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/install-cockpit.sh | bash
 
 # Databases
@@ -73,6 +74,7 @@ curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/set
 | `install-fail2ban.sh`    | Install and enable the Fail2Ban service                          | Yes  | Multi         |
 | `secure-ssh.sh`          | Change SSH port, disable root/password login, enable pubkey      | Yes  | Any (OpenSSH) |
 | `install-cloudpanel.sh`  | Install CloudPanel CE v2, choose DB engine, verify checksum      | Yes  | Debian/Ubuntu |
+| `clpctl-manager.sh`      | Manage CloudPanel via `clpctl`: sites, db, users, certs, vhosts  | Yes  | CloudPanel    |
 | `install-cockpit.sh`     | Install Cockpit + modules, reverse-proxy config, open port 9090  | Yes  | Debian/Ubuntu |
 | `install-postgresql.sh`  | Install latest PostgreSQL (PGDG), create roles, remote access    | Yes  | Debian/Ubuntu |
 | `enable-mysql-remote.sh` | Set bind-address + firewall for remote MySQL/MariaDB access      | Yes  | Debian/Ubuntu |
@@ -122,6 +124,21 @@ curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/set
 - Downloads the official installer and verifies its SHA-256 checksum. **Fails
   closed** on mismatch. Update `EXPECTED_SHA` from the CloudPanel docs for new
   releases. Web console at `https://<server-ip>:8443`.
+
+### clpctl-manager.sh
+
+- Requires CloudPanel (`clpctl`). Interactive menu over the documented v2 CLI
+  ([reference](https://www.cloudpanel.io/docs/v2/cloudpanel-cli/)). Loops until you quit.
+- **CloudPanel**: enable/disable basic auth, Cloudflare IP update.
+- **Database**: show master credentials, add, export, import.
+- **Certificates**: Let's Encrypt install (with SAN), install custom certificate.
+- **Sites**: add PHP / Node.js / Python / Static / Reverse Proxy, delete site.
+- **Users**: add (admin/site-manager/user roles), delete, list, reset password,
+  disable MFA.
+- **vHost templates**: list, import, add, delete, view.
+- **System**: reset permissions, purge Varnish cache.
+- Passwords are entered interactively (not stored). Note they are passed to
+  `clpctl` as flags, so they may briefly appear in the process list.
 
 ### install-cockpit.sh
 

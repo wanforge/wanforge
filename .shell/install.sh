@@ -83,6 +83,7 @@ SCRIPTS=(
   "install-firewall|.shell/install-firewall.sh|Install & configure ufw firewall"
   "install-fail2ban|.shell/install-fail2ban.sh|Install & enable Fail2Ban"
   "install-cloudpanel|.shell/install-cloudpanel.sh|Install CloudPanel CE v2 (Debian/Ubuntu only)"
+  "clpctl-manager|.shell/clpctl-manager.sh|Manage CloudPanel via clpctl (sites, db, users, certs)"
   "install-cockpit|.shell/install-cockpit.sh|Install Cockpit web console + modules (Debian/Ubuntu)"
   "install-postgresql|.shell/install-postgresql.sh|Install PostgreSQL + create roles + remote access"
   "enable-mysql-remote|.shell/enable-mysql-remote.sh|Allow remote MySQL/MariaDB access (sensitive)"
