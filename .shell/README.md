@@ -1,8 +1,8 @@
 # wanforge.asia — Server Scripts
 
 A collection of Linux server setup and hardening scripts. Run them individually,
-or use the interactive launcher `install.sh` which shows a multi-select checkbox
-menu and runs the chosen scripts in order.
+or use the interactive launcher `install.sh` which shows a grouped multi-select
+checkbox menu and runs the chosen scripts in order.
 
 This is a public repository, so no authentication is required to run the scripts.
 
@@ -30,9 +30,32 @@ Menu controls:
 | Enter          | Run the selected scripts     |
 | Q              | Cancel and exit              |
 
-Selected scripts run in menu order. If one fails, the rest still continue. Auth
-(GitHub username + token) is shown but optional — only needed if you fork the
-scripts into a private repository.
+The menu is grouped by category and runs the selected scripts in menu order. If
+one fails, the rest still continue. Auth (GitHub username + token) is shown but
+optional — only needed if you fork the scripts into a private repository.
+
+```text
+Select scripts to run:  ↑/↓ move · SPACE toggle · A all · ENTER run · Q quit
+
+── System ──
+❯ [ ] install-packages     Update system + install base packages (multi-distro)
+  [ ] set-timezone         Set timezone (default Asia/Jakarta)
+── Security ──
+  [ ] install-firewall     Install & configure ufw firewall
+  [ ] install-fail2ban     Install & enable Fail2Ban
+  [ ] secure-ssh           Harden SSH: change port, disable root/password, pubkey
+── Panel & Console ──
+  [ ] install-cloudpanel   Install CloudPanel CE v2 (Debian/Ubuntu only)
+  [ ] clpctl-manager       Manage CloudPanel via clpctl (sites, db, users, certs)
+  [ ] install-cockpit      Install Cockpit web console + modules (Debian/Ubuntu)
+── Database ──
+  [ ] install-postgresql   Install PostgreSQL + create roles + remote access
+  [ ] enable-mysql-remote  Allow remote MySQL/MariaDB access (sensitive)
+── App Runtime ──
+  [ ] install-nodejs       Install Node.js via nvm (user-local) + PM2
+  [ ] install-composer     Install Composer (user-local, signature-verified)
+  [ ] setup-pm2-app        Configure pm2-logrotate + register an app (ecosystem)
+```
 
 ## Run a Single Script
 
@@ -65,22 +88,22 @@ curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/set
 
 ## Scripts Overview
 
-| Script                   | Purpose                                                          | Sudo | Distro        |
-| ------------------------ | ---------------------------------------------------------------- | ---- | ------------- |
-| `install.sh`             | Checkbox menu launcher that runs the other scripts               | —    | Any           |
-| `install-packages.sh`    | Update/upgrade system, install base packages                     | Yes  | Multi         |
-| `set-timezone.sh`        | Set timezone via `timedatectl` (default `Asia/Jakarta`)          | Yes  | Any (systemd) |
-| `install-firewall.sh`    | Install `ufw`, open SSH/http/https, add custom ports, enable     | Yes  | Mainly Deb/Ubu |
-| `install-fail2ban.sh`    | Install and enable the Fail2Ban service                          | Yes  | Multi         |
-| `secure-ssh.sh`          | Change SSH port, disable root/password login, enable pubkey      | Yes  | Any (OpenSSH) |
-| `install-cloudpanel.sh`  | Install CloudPanel CE v2, choose DB engine, verify checksum      | Yes  | Debian/Ubuntu |
-| `clpctl-manager.sh`      | Manage CloudPanel via `clpctl`: sites, db, users, certs, vhosts  | Yes  | CloudPanel    |
-| `install-cockpit.sh`     | Install Cockpit + modules, reverse-proxy config, open port 9090  | Yes  | Debian/Ubuntu |
-| `install-postgresql.sh`  | Install latest PostgreSQL (PGDG), create roles, remote access    | Yes  | Debian/Ubuntu |
-| `enable-mysql-remote.sh` | Set bind-address + firewall for remote MySQL/MariaDB access      | Yes  | Debian/Ubuntu |
-| `install-nodejs.sh`      | Install Node.js via nvm (user-local), choose version, PM2        | No   | Any           |
-| `install-composer.sh`    | Install Composer to `~/.local/bin`, verify signature             | No   | Any (needs PHP) |
-| `setup-pm2-app.sh`       | Configure pm2-logrotate + register an app (ecosystem.config.js)  | No   | Any           |
+| Group         | Script                   | Purpose                                                          | Sudo | Distro          |
+| ------------- | ------------------------ | ---------------------------------------------------------------- | ---- | --------------- |
+| —             | `install.sh`             | Grouped checkbox launcher that runs the other scripts            | —    | Any             |
+| System        | `install-packages.sh`    | Update/upgrade system, install base packages                     | Yes  | Multi           |
+| System        | `set-timezone.sh`        | Set timezone via `timedatectl` (default `Asia/Jakarta`)          | Yes  | Any (systemd)   |
+| Security      | `install-firewall.sh`    | Install `ufw`, open SSH/http/https, add custom ports, enable     | Yes  | Mainly Deb/Ubu  |
+| Security      | `install-fail2ban.sh`    | Install and enable the Fail2Ban service                          | Yes  | Multi           |
+| Security      | `secure-ssh.sh`          | Change SSH port, disable root/password login, enable pubkey      | Yes  | Any (OpenSSH)   |
+| Panel & Console | `install-cloudpanel.sh`| Install CloudPanel CE v2, choose DB engine, verify checksum      | Yes  | Debian/Ubuntu   |
+| Panel & Console | `clpctl-manager.sh`    | Manage CloudPanel via `clpctl`: sites, db, users, certs, vhosts  | Yes  | CloudPanel      |
+| Panel & Console | `install-cockpit.sh`   | Install Cockpit + modules, reverse-proxy config, open port 9090  | Yes  | Debian/Ubuntu   |
+| Database      | `install-postgresql.sh`  | Install latest PostgreSQL (PGDG), create roles, remote access    | Yes  | Debian/Ubuntu   |
+| Database      | `enable-mysql-remote.sh` | Remote MySQL/MariaDB: bind-address, firewall, create users       | Yes  | Debian/Ubuntu   |
+| App Runtime   | `install-nodejs.sh`      | Install Node.js via nvm (user-local), choose version, PM2        | No   | Any             |
+| App Runtime   | `install-composer.sh`    | Install Composer to `~/.local/bin`, verify signature             | No   | Any (needs PHP) |
+| App Runtime   | `setup-pm2-app.sh`       | Configure pm2-logrotate + register an app (ecosystem.config.js)  | No   | Any             |
 
 ## Script Details
 
