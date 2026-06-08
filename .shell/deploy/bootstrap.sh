@@ -76,6 +76,10 @@ else
   exit 1
 fi
 
+PAT_URL="https://github.com/settings/tokens/new?scopes=repo&description=server-bootstrap"
+printf "%bGenerate a token (PAT) here:%b\n  %b%s%b\n\n" \
+  "${C_DIM}" "${C_RESET}" "${C_YELLOW}" "${PAT_URL}" "${C_RESET}" >&2
+
 printf "GitHub username: " >&2
 read -r GH_USER <&3
 
