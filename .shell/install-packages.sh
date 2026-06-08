@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2086
 #
-# install-fail2ban.sh — install & enable Fail2Ban (interactive, multi-distro).
+# install-packages.sh — update system & install base packages (multi-distro).
+# Package managers: apt, dnf, yum, pacman, zypper, apk.
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/deploy/install-fail2ban.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/install-packages.sh | bash
 #
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2026 Sugeng Sulistiyawan
 #
 set -euo pipefail
-TASK="install-fail2ban"
+TASK="install-packages"
 
 # ---- common preamble ----------------------------------------------------
 if [ -t 2 ] && [ -z "${NO_COLOR:-}" ]; then
@@ -44,10 +45,22 @@ info() { printf "    %b•%b %s\n" "${C_DIM}" "${C_RESET}" "$1" >&2; }
 ok()   { printf "    %b✔%b %s\n" "${C_GREEN}" "${C_RESET}" "$1" >&2; }
 warn() { printf "    %b!%b %s\n" "${C_YELLOW}" "${C_RESET}" "$1" >&2; }
 err()  { printf "    %b✖%b %s\n" "${C_RED}" "${C_RESET}" "$1" >&2; }
-if [ -e /dev/tty ]; then exec 3</dev/tty; else exec 3<&0; fi
-ask() { local prompt="$1" def="${2:-}" ans; printf "%b?%b %s " "${C_YELLOW}" "${C_RESET}" "${prompt}" >&2; read -r ans <&3 || ans=""; echo "${ans:-$def}"; }
 if [ "$(id -u)" -eq 0 ]; then SUDO=""; else SUDO="sudo"; fi
 detect_pm() { for pm in apt-get dnf yum pacman zypper apk; do command -v "$pm" >/dev/null 2>&1 && { echo "$pm"; return 0; }; done; return 1; }
+
+# ---- package-manager wrappers ------------------------------------------
+pm_update() {
+  case "${PM}" in
+    apt-get) ${SUDO} apt-get update ;; dnf) ${SUDO} dnf -y makecache ;; yum) ${SUDO} yum -y makecache ;;
+    pacman) ${SUDO} pacman -Sy --noconfirm ;; zypper) ${SUDO} zypper --non-interactive refresh ;; apk) ${SUDO} apk update ;;
+  esac
+}
+pm_upgrade() {
+  case "${PM}" in
+    apt-get) ${SUDO} apt-get upgrade -y ;; dnf) ${SUDO} dnf -y upgrade --refresh ;; yum) ${SUDO} yum -y update ;;
+    pacman) ${SUDO} pacman -Su --noconfirm ;; zypper) ${SUDO} zypper --non-interactive update ;; apk) ${SUDO} apk upgrade ;;
+  esac
+}
 pm_install() {
   local pkgs="$*"
   case "${PM}" in
@@ -55,27 +68,36 @@ pm_install() {
     pacman) ${SUDO} pacman -S --noconfirm --needed ${pkgs} ;; zypper) ${SUDO} zypper --non-interactive install ${pkgs} ;; apk) ${SUDO} apk add ${pkgs} ;;
   esac
 }
-svc_enable_start() {
-  local svc="$1"
-  if command -v systemctl >/dev/null 2>&1; then
-    ${SUDO} systemctl enable "${svc}" >/dev/null 2>&1 || true
-    ${SUDO} systemctl start "${svc}" || true
-  elif command -v rc-update >/dev/null 2>&1; then
-    ${SUDO} rc-update add "${svc}" default >/dev/null 2>&1 || true
-    ${SUDO} rc-service "${svc}" start || true
-  else
-    warn "No init system detected; start ${svc} manually."
-  fi
+pm_cleanup() {
+  case "${PM}" in
+    apt-get) ${SUDO} apt-get autoremove -y; ${SUDO} apt-get autoclean ;;
+    dnf) ${SUDO} dnf -y autoremove; ${SUDO} dnf clean all ;;
+    yum) ${SUDO} yum -y autoremove || true; ${SUDO} yum clean all ;;
+    pacman) ${SUDO} pacman -Qtdq 2>/dev/null | ${SUDO} pacman -Rns --noconfirm - 2>/dev/null || true ;;
+    zypper) ${SUDO} zypper clean --all ;; apk) : ;;
+  esac
+}
+base_pkgs() {
+  case "${PM}" in
+    apt-get) echo "micro curl wget git speedtest-cli python3 python3-pip python3-dev python3-virtualenv" ;;
+    dnf) echo "micro curl wget git speedtest-cli python3 python3-pip python3-devel python3-virtualenv" ;;
+    yum) echo "micro curl wget git python3 python3-pip python3-devel" ;;
+    pacman) echo "micro curl wget git python python-pip python-virtualenv speedtest-cli" ;;
+    zypper) echo "micro curl wget git python3 python3-pip python3-devel python3-virtualenv" ;;
+    apk) echo "micro curl wget git python3 py3-pip python3-dev py3-virtualenv" ;;
+  esac
 }
 
 # ---- run ----------------------------------------------------------------
 banner
 PM="$(detect_pm)" || { err "No supported package manager found."; exit 1; }
-ANS="$(ask "Install & enable Fail2Ban? [Y/n]:" "y")"
-case "${ANS}" in
-  n|N|no) info "Skipped Fail2Ban."; exit 0 ;;
-esac
-info "Installing fail2ban..."
-pm_install fail2ban || { err "Failed to install fail2ban."; exit 1; }
-svc_enable_start fail2ban
-printf "\n%b✔ Fail2Ban installed and started.%b\n\n" "${C_BOLD}${C_GREEN}" "${C_RESET}" >&2
+info "Package manager: ${C_BOLD}${PM}${C_RESET}"
+info "Refreshing package index..."; pm_update
+info "Upgrading installed packages..."; pm_upgrade
+PKGS="$(base_pkgs)"; info "Installing: ${PKGS}"; pm_install ${PKGS}
+info "Cleaning up..."; pm_cleanup
+if ! command -v speedtest-cli >/dev/null 2>&1 && command -v pip3 >/dev/null 2>&1; then
+  info "speedtest-cli missing from repo; installing via pip3"
+  pip3 install --user speedtest-cli >/dev/null 2>&1 || true
+fi
+printf "\n%b✔ Packages ready.%b\n\n" "${C_BOLD}${C_GREEN}" "${C_RESET}" >&2

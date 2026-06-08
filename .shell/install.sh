@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #
-# bootstrap.sh — interactive launcher for wanforge deploy scripts.
+# install.sh — interactive launcher for wanforge server scripts.
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/deploy/bootstrap.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/install.sh | bash
 #
 # Shows a menu of available scripts, then fetches and runs the chosen one.
 # Auth (username + PAT) is OPTIONAL — only needed for scripts in private repos.
@@ -78,11 +78,11 @@ REPO_BRANCH="master"
 
 # Script registry — add new scripts here as: "label|path-in-repo|description"
 SCRIPTS=(
-  "install-packages|.shell/deploy/install-packages.sh|Update system + install base packages (multi-distro)"
-  "set-timezone|.shell/deploy/set-timezone.sh|Set timezone (default Asia/Jakarta)"
-  "install-firewall|.shell/deploy/install-firewall.sh|Install & configure ufw firewall"
-  "install-fail2ban|.shell/deploy/install-fail2ban.sh|Install & enable Fail2Ban"
-  "install-cloudpanel|.shell/deploy/install-cloudpanel.sh|Install CloudPanel CE v2 (Debian/Ubuntu only)"
+  "install-packages|.shell/install-packages.sh|Update system + install base packages (multi-distro)"
+  "set-timezone|.shell/set-timezone.sh|Set timezone (default Asia/Jakarta)"
+  "install-firewall|.shell/install-firewall.sh|Install & configure ufw firewall"
+  "install-fail2ban|.shell/install-fail2ban.sh|Install & enable Fail2Ban"
+  "install-cloudpanel|.shell/install-cloudpanel.sh|Install CloudPanel CE v2 (Debian/Ubuntu only)"
 )
 # ------------------------------------------------------------------------
 
