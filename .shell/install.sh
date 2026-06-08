@@ -76,21 +76,21 @@ REPO_OWNER="wanforge"
 REPO_NAME="wanforge"
 REPO_BRANCH="master"
 
-# Script registry — add new scripts here as: "label|path-in-repo|description"
+# Script registry — "label|path-in-repo|description|group". Keep groups contiguous.
 SCRIPTS=(
-  "install-packages|.shell/install-packages.sh|Update system + install base packages (multi-distro)"
-  "set-timezone|.shell/set-timezone.sh|Set timezone (default Asia/Jakarta)"
-  "install-firewall|.shell/install-firewall.sh|Install & configure ufw firewall"
-  "install-fail2ban|.shell/install-fail2ban.sh|Install & enable Fail2Ban"
-  "install-cloudpanel|.shell/install-cloudpanel.sh|Install CloudPanel CE v2 (Debian/Ubuntu only)"
-  "clpctl-manager|.shell/clpctl-manager.sh|Manage CloudPanel via clpctl (sites, db, users, certs)"
-  "install-cockpit|.shell/install-cockpit.sh|Install Cockpit web console + modules (Debian/Ubuntu)"
-  "install-postgresql|.shell/install-postgresql.sh|Install PostgreSQL + create roles + remote access"
-  "enable-mysql-remote|.shell/enable-mysql-remote.sh|Allow remote MySQL/MariaDB access (sensitive)"
-  "install-nodejs|.shell/install-nodejs.sh|Install Node.js via nvm (user-local) + PM2"
-  "install-composer|.shell/install-composer.sh|Install Composer (user-local, signature-verified)"
-  "secure-ssh|.shell/secure-ssh.sh|Harden SSH: change port, disable root/password, pubkey"
-  "setup-pm2-app|.shell/setup-pm2-app.sh|Configure pm2-logrotate + register an app (ecosystem)"
+  "install-packages|.shell/install-packages.sh|Update system + install base packages (multi-distro)|System"
+  "set-timezone|.shell/set-timezone.sh|Set timezone (default Asia/Jakarta)|System"
+  "install-firewall|.shell/install-firewall.sh|Install & configure ufw firewall|Security"
+  "install-fail2ban|.shell/install-fail2ban.sh|Install & enable Fail2Ban|Security"
+  "secure-ssh|.shell/secure-ssh.sh|Harden SSH: change port, disable root/password, pubkey|Security"
+  "install-cloudpanel|.shell/install-cloudpanel.sh|Install CloudPanel CE v2 (Debian/Ubuntu only)|Panel & Console"
+  "clpctl-manager|.shell/clpctl-manager.sh|Manage CloudPanel via clpctl (sites, db, users, certs)|Panel & Console"
+  "install-cockpit|.shell/install-cockpit.sh|Install Cockpit web console + modules (Debian/Ubuntu)|Panel & Console"
+  "install-postgresql|.shell/install-postgresql.sh|Install PostgreSQL + create roles + remote access|Database"
+  "enable-mysql-remote|.shell/enable-mysql-remote.sh|Allow remote MySQL/MariaDB access (sensitive)|Database"
+  "install-nodejs|.shell/install-nodejs.sh|Install Node.js via nvm (user-local) + PM2|App Runtime"
+  "install-composer|.shell/install-composer.sh|Install Composer (user-local, signature-verified)|App Runtime"
+  "setup-pm2-app|.shell/setup-pm2-app.sh|Configure pm2-logrotate + register an app (ecosystem)|App Runtime"
 )
 # ------------------------------------------------------------------------
 
@@ -107,18 +107,31 @@ fi
 # SPACE toggle, A toggle-all, ENTER confirm, Q quit.
 SELECTED=()
 checkbox_menu() {
-  local n=${#SCRIPTS[@]} i cursor=0 first=1 key rest
+  local n=${#SCRIPTS[@]} i cursor=0 first=1 key rest prev g lbl dsc
   local -a checked
   for ((i = 0; i < n; i++)); do checked[i]=0; done
+
+  # total rendered lines = items + one header per distinct (contiguous) group
+  local groups=0 pg=""
+  for ((i = 0; i < n; i++)); do
+    IFS='|' read -r _ _ _ g <<< "${SCRIPTS[i]}"
+    [ "$g" != "$pg" ] && { groups=$((groups + 1)); pg="$g"; }
+  done
+  local total=$((n + groups))
 
   printf "%bSelect scripts to run:%b  %b↑/↓ move · SPACE toggle · A all · ENTER run · Q quit%b\n\n" \
     "${C_BOLD}" "${C_RESET}" "${C_DIM}" "${C_RESET}" >&2
 
   while true; do
-    [ "$first" -eq 0 ] && printf "\033[%dA" "$n" >&2
+    [ "$first" -eq 0 ] && printf "\033[%dA" "$total" >&2
     first=0
+    prev=""
     for ((i = 0; i < n; i++)); do
-      IFS='|' read -r lbl _ dsc <<< "${SCRIPTS[i]}"
+      IFS='|' read -r lbl _ dsc g <<< "${SCRIPTS[i]}"
+      if [ "$g" != "$prev" ]; then
+        printf "\033[2K%b── %s ──%b\n" "${C_BOLD}${C_YELLOW}" "$g" "${C_RESET}" >&2
+        prev="$g"
+      fi
       local box="[ ]"; [ "${checked[i]}" -eq 1 ] && box="[x]"
       printf "\033[2K" >&2
       if [ "$i" -eq "$cursor" ]; then
@@ -143,6 +156,7 @@ checkbox_menu() {
   done
 
   for ((i = 0; i < n; i++)); do [ "${checked[i]}" -eq 1 ] && SELECTED+=("$i"); done
+  return 0
 }
 
 banner
