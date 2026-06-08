@@ -145,7 +145,9 @@ curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/set
 - Debian/Ubuntu only. Installs Cockpit plus `networkmanager`, `storaged`,
   `sosreport`, `pcp` modules and enables `pmcd`/`pmlogger`.
 - Optional reverse-proxy config writes `/etc/cockpit/cockpit.conf` with
-  `AllowOrigins`, `ProtocolHeader`, `AllowUnencrypted` (for use behind CloudPanel).
+  `AllowOrigins` (bare domain, e.g. `cockpit.domain.id` — TLS is terminated by
+  CloudPanel), `ProtocolHeader`, and `AllowUnencrypted`. Add the matching domain
+  in CloudPanel as a reverse proxy to `http://127.0.0.1:9090`.
 - Opens port `9090` in `ufw`. Console at `http://127.0.0.1:9090`.
 
 ### install-postgresql.sh
@@ -163,6 +165,10 @@ curl -fsSL https://raw.githubusercontent.com/wanforge/wanforge/master/.shell/set
 - Debian/Ubuntu only. Auto-detects the MySQL/MariaDB config file, backs it up,
   sets `bind-address = 0.0.0.0`, restarts the service, and opens `3306` for a
   chosen source CIDR.
+- Optionally creates remote DB users: connects as admin (root socket via `sudo`,
+  or a root password), then loops to create `user@host` with a password and a
+  grant on a chosen database (or all). Host defaults to `%` (any client).
+  Passwords are entered interactively and never stored.
 
 ### install-nodejs.sh
 
