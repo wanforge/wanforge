@@ -63,17 +63,20 @@ microservices for healthcare systems at **RSUD dr. Soedomo Trenggalek**.
   <img src="https://img.shields.io/badge/ESP32-000000?style=flat&logo=espressif&logoColor=white">
 </p>
 
-### Server Toolkit — [`server-mine`](https://github.com/wanforge/server-mine)
+### Server Toolkit — [`scripts`](https://github.com/wanforge/scripts)
 
-One-command, multi-distro Linux server setup &amp; hardening — a grouped checkbox
-launcher for packages, firewall, SSH, CloudPanel, Cockpit, databases, Node.js,
-Composer, and PM2. Open source under GPL-3.0.
+One-command Linux server automation — interactive checkbox launcher covering
+24 scripts across 8 categories: system setup, security (ufw · Fail2Ban · SSH
+hardening), cloud panels (CloudPanel · Cockpit), databases (PostgreSQL · MySQL),
+app runtimes (Node.js · Python · Composer · PM2), monitoring & observability
+(Prometheus · Grafana · Zabbix), CI/CD (GitHub Actions self-hosted runners),
+and network & Proxmox tooling. Open source under GPL-3.0.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/wanforge/server-mine/main/install.sh | bash
+curl -fsSL https://scripts.wanforge.asia/install.sh | bash
 ```
 
-➜ source: **[github.com/wanforge/server-mine](https://github.com/wanforge/server-mine)** · pick what you need, it runs the rest in order.
+➜ **Docs:** [scripts.wanforge.asia](https://scripts.wanforge.asia) · **Source:** [github.com/wanforge/scripts](https://github.com/wanforge/scripts)
 
 ### GitHub
 
