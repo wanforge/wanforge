@@ -1,7 +1,7 @@
 # Sugeng Sulistiyawan
 
 Senior Full-Stack & DevOps Engineer at DOCOBYTE.
-Focus on scalable backend systems, cloud infrastructure, and IoT solutions.
+Coding since 2017. Focus on scalable backend systems, cloud infrastructure, and IoT solutions.
 
 ## Impact
 
@@ -28,9 +28,10 @@ curl -fsSL https://raw.githubusercontent.com/wanforge/scripts/master/install.sh 
 
 ## Experience
 
+* **Founder & Lead Engineer** @ DOCOBYTE (2026 - Present)
 * **Full-Stack Developer & DevOps** @ RSUD dr. Soedomo Trenggalek (2024 - Present)
-* **Founder & Lead Engineer** @ DOCOBYTE (2015 - Present)
 * **IoT Full-Stack / Backend & DevOps** @ Matador Lectro (2021 - 2024)
+* **Founder & Lead Engineer** @ Diecoding (2017 - 2026)
 
 ## Connect
 
