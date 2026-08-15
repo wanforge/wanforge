@@ -31,7 +31,7 @@ curl -fsSL https://raw.githubusercontent.com/wanforge/scripts/master/install.sh 
 * **Founder & Lead Engineer** @ DOCOBYTE (2026 - Present)
 * **Full-Stack Developer & DevOps** @ RSUD dr. Soedomo Trenggalek (2024 - Present)
 * **IoT Full-Stack / Backend & DevOps** @ Matador Lectro (2021 - 2024)
-* **Founder & Lead Engineer** @ Diecoding (2017 - 2026)
+* **Full-Stack Developer, DevOps & Freelance** @ Various Companies & Projects (2017 - 2026)
 
 ## Connect
 
