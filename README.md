@@ -1,69 +1,39 @@
-# Sugeng Sulistiyawan (wanforge)
+# Sugeng Sulistiyawan
 
-<p align="left">
-  <b>Senior Full-Stack &amp; DevOps Engineer @ <a href="https://docobyte.com">DOCOBYTE</a></b><br>
-  I build scalable backend systems, automate cloud infrastructure, and design IoT solutions.
-</p>
+Senior Full-Stack & DevOps Engineer at DOCOBYTE.
+Focus on scalable backend systems, cloud infrastructure, and IoT solutions.
 
-<p align="left">
-  <a href="https://docobyte.com"><img src="https://img.shields.io/badge/docobyte.com-10B981?style=for-the-badge" alt="docobyte.com"></a>
-  <a href="https://linkedin.com/in/sugengsulistiyawan"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="mailto:sugeng.sulistiyawan@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
-</p>
+## Impact
 
----
+* Delivered 200+ web applications
+* Integrated 50+ IoT systems
+* Improved deployment speed by 80% via CI/CD
+* Reduced cloud infrastructure cost by 40%
 
-### Quick Impact
-* **200+** Web Applications delivered
-* **50+** IoT Systems integrated
-* **80%** Faster deployment workflows via CI/CD
-* **40%** Cloud infrastructure cost reduction
+## Tech Stack
 
----
+* **Backend:** Go, Node.js, Python, PHP (Laravel)
+* **DevOps / Cloud:** Docker, Kubernetes, Terraform, Ansible, AWS, GCP
+* **Databases:** PostgreSQL, MySQL, MongoDB, Redis, RabbitMQ
+* **IoT:** ESP32, Arduino, Raspberry Pi
+* **Observability:** Prometheus, Grafana, ELK
 
-### Tech Stack
+## Projects
 
-```
-Backend      :: Go • Node.js • Python • PHP (Laravel)
-DevOps/Cloud :: Docker • Kubernetes • Terraform • Ansible • AWS • GCP
-Databases    :: PostgreSQL • MySQL • MongoDB • Redis • RabbitMQ
-IoT          :: ESP32 • Arduino • Raspberry Pi
-Observability:: Prometheus • Grafana • ELK
-```
-
----
-
-### Server Automation Toolkit — [`scripts`](https://github.com/wanforge/scripts)
+* **[scripts](https://github.com/wanforge/scripts)** - Interactive Linux server setup & security hardening script
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/wanforge/scripts/master/install.sh | bash
 ```
-*Interactive one-command Linux server setup & security hardening.*
 
----
+## Experience
 
-### GitHub Activity
+* **Full-Stack Developer & DevOps** @ RSUD dr. Soedomo Trenggalek (2024 - Present)
+* **Founder & Lead Engineer** @ DOCOBYTE (2015 - Present)
+* **IoT Full-Stack / Backend & DevOps** @ Matador Lectro (2021 - 2024)
 
-<div align="center">
-  <img src="profile-summary-card-output/github/0-profile-details.svg" width="400">
-  <img src="profile-summary-card-output/github/1-repos-per-language.svg" width="400">
-  <img src="profile-summary-card-output/github/3-stats.svg" width="400">
-</div>
+## Connect
 
----
-
-<details>
-<summary><b>Professional Experience</b> (Click to expand)</summary>
-
-* **Full-Stack Developer & DevOps** @ RSUD dr. Soedomo Trenggalek *(2024 - Present)*
-* **Founder & Lead Engineer** @ DOCOBYTE *(2015 - Present)*
-* **IoT Full-Stack / Backend & DevOps** @ Matador Lectro *(2021 - 2024)*
-
-</details>
-
----
-
-<p align="center">
-  <a href="https://docobyte.com">docobyte.com</a> · 
-  <a href="mailto:sugeng.sulistiyawan@gmail.com">sugeng.sulistiyawan@gmail.com</a>
-</p>
+* [docobyte.com](https://docobyte.com)
+* [LinkedIn](https://linkedin.com/in/sugengsulistiyawan)
+* [sugeng.sulistiyawan@gmail.com](mailto:sugeng.sulistiyawan@gmail.com)
