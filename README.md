@@ -2,7 +2,7 @@
 
 # wf
 
-Full-Stack · DevOps & Infra · IoT
+Full-Stack · DevOps & Infra · Linux & Systems · Open Source
 
 [![Web](https://img.shields.io/badge/Web-wanforge.github.io-181717?style=flat-square&logo=githubpages&logoColor=white)](https://wanforge.github.io)
 [![GitHub](https://img.shields.io/badge/GitHub-wanforge-181717?style=flat-square&logo=github)](https://github.com/wanforge)
