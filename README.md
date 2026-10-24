@@ -32,7 +32,7 @@ Full-Stack · DevOps & Infra · IoT
 <div align="center">
 
 <img src="https://github-readme-stats.vercel.app/api?username=wanforge&show_icons=true&hide_border=true&theme=tokyonight" height="150" alt="GitHub Stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=wanforge&layout=compact&hide_border=true&theme=tokyonight&langs_count=6" height="150" alt="Top Languages" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=wanforge&layout=compact&hide=HTML,Fluent,SCSS&hide_border=true&theme=tokyonight&langs_count=6" height="150" alt="Top Languages" />
 
 <br>
 
