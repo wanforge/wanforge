@@ -4,8 +4,8 @@
 
 Full-Stack · DevOps & Infra · IoT
 
+[![Web](https://img.shields.io/badge/Web-wanforge.github.io-181717?style=flat-square&logo=githubpages&logoColor=white)](https://wanforge.github.io)
 [![GitHub](https://img.shields.io/badge/GitHub-wanforge-181717?style=flat-square&logo=github)](https://github.com/wanforge)
-[![Website](https://img.shields.io/badge/Web-docobyte.com-000000?style=flat-square&logo=google-chrome&logoColor=white)](https://docobyte.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sugengsulistiyawan-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/sugengsulistiyawan)
 [![Email](https://img.shields.io/badge/Email-sugeng.sulistiyawan@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:sugeng.sulistiyawan@gmail.com)
 
@@ -21,14 +21,6 @@ Infra & Cloud   Docker · Podman · Kubernetes · Terraform · Linux
 Databases       PostgreSQL · MySQL · Redis
 IoT & Obs       ESP32 · Arduino · Raspberry Pi · Grafana · Prometheus
 ```
-
----
-
-### Experience & Focus
-
-- **RSUD dr. Soedomo Trenggalek** (2024–present) — Full-Stack Developer & DevOps, SIMRS & Healthcare Systems
-- **DOCOBYTE** (2026–present) — Founder & Lead Engineer
-- **Matador Lectro** (2021–2024) — IoT Full-Stack / Backend & DevOps
 
 ---
 
