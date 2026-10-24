@@ -1,8 +1,4 @@
-# Sugeng Sulistiyawan
-
-**Senior Full-Stack Engineer · DevOps & Infrastructure · Founder @ [DOCOBYTE](https://docobyte.com)**
-
-Building software for healthcare, infrastructure, and IoT. Coding since 2017.
+# wf
 
 ## Work
 
